@@ -33,14 +33,31 @@ Replace `YOUR_USERNAME` with your GitHub username.
 
 ## ✅ Step 4: Configure Build Settings
 
+**IMPORTANT:** Cloudflare Pages automatically deploys static files!
+
 **Framework preset:** None (Static HTML)
 
 **Build settings:**
-- Build command: (leave empty)
-- Build output directory: `/` 
-- Root directory: `/`
+- **Build command:** `echo "No build required"`
+- **Build output directory:** `.` (current directory - this is where your HTML files are)
+- **Root directory:** (leave empty or `/`)
+
+**OR if that doesn't work:**
+- **Build command:** Leave empty and skip if it keeps spinning
+- Try changing **Build output directory** to just `.` instead of `/`
 
 Click **"Save and Deploy"**
+
+### 🔧 If you already deployed with wrong settings:
+
+1. Go to your Pages project in Cloudflare
+2. Click **"Settings"** → **"Builds & deployments"**
+3. Scroll to **"Build configuration"**
+4. Click **"Edit configuration"**
+5. **Build command:** Delete everything, leave it empty
+6. **Build output directory:** Change to `/`
+7. Click **"Save"**
+8. Go to **"Deployments"** tab → Click **"Retry deployment"**
 
 ## ✅ Step 5: Connect Custom Domain (aramailabs.com)
 

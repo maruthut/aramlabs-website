@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aram AI Labs - Patent-pending AI technology that understands what resumes really mean. Enterprise-grade resume screening powered by LLM-enhanced embeddings.">
-    <meta name="keywords" content="AI resume screening, HR tech, ATS, talent acquisition, machine learning">
+    <meta name="description" content="Aram AI Labs - Patent-pending AI resume screening built on AWS. Using Bedrock, Lambda, and Textract to understand what resumes really mean. LLM-enhanced semantic search for enterprise talent acquisition.">
+    <meta name="keywords" content="AI resume screening, AWS Bedrock, HR tech, ATS, talent acquisition, machine learning, semantic search, LLM embeddings">
     <title>Aram AI Labs - AI That Reads Between the Lines</title>
     
     <!-- Fonts -->
@@ -21,10 +21,10 @@
         }
         
         :root {
-            /* Colors */
+            /* Colors - Modern Blue/Purple Gradient */
             --color-primary: #2563eb;
             --color-secondary: #7c3aed;
-            --color-accent: #10b981;
+            --color-accent: #06b6d4;
             --color-dark: #0f172a;
             --color-text: #334155;
             --color-text-light: #64748b;
@@ -142,7 +142,7 @@
             bottom: 0;
             background: 
                 radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3), transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 135, 135, 0.3), transparent 50%);
+                radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.3), transparent 50%);
             animation: pulse 10s ease-in-out infinite alternate;
         }
         
@@ -246,6 +246,11 @@
         /* Section Styles */
         .section {
             padding: var(--space-xl) var(--space-md);
+            background: var(--color-white);
+        }
+        
+        .section:nth-of-type(even) {
+            background: linear-gradient(to bottom, #faf5ff, #f3f4f6);
         }
         
         .container {
@@ -324,7 +329,7 @@
         
         /* Technology Section */
         .tech-section {
-            background: var(--color-light);
+            background: linear-gradient(135deg, #ede9fe 0%, #dbeafe 100%) !important;
         }
         
         .tech-grid {
@@ -589,7 +594,7 @@
             width: 80px;
             height: 80px;
             margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -687,14 +692,14 @@
                   </defs>
                   <text x="0" y="24" 
                         font-family="Inter, -apple-system, system-ui, sans-serif" 
-                        font-size="24" 
-                        font-weight="700" 
+                        font-size="26" 
+                        font-weight="800" 
                         fill="url(#logoGradient)"
                         letter-spacing="-0.5">ARAM</text>
                   <text x="42" y="36" 
                         font-family="Inter, -apple-system, system-ui, sans-serif" 
-                        font-size="9" 
-                        font-weight="600" 
+                        font-size="10" 
+                        font-weight="700" 
                         fill="#64748b"
                         letter-spacing="1.5"
                         text-anchor="middle">AI LABS</text>
@@ -758,33 +763,90 @@
         </div>
     </section>
 
+    <!-- How It Works Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How Our AI Understands Resumes</h2>
+                <p class="section-subtitle">Patent-pending technology that goes beyond keywords to understand meaning, context, and implicit knowledge</p>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-card" data-animate>
+                    <div class="tech-icon">📄</div>
+                    <h3 class="tech-title">1. Intelligent Parsing</h3>
+                    <p class="tech-desc">Extract structured data from any resume format—PDF, DOCX, or images. Our NLP pipeline identifies skills, experience, education, and context that keyword systems miss.</p>
+                </div>
+                <div class="tech-card" data-animate>
+                    <div class="tech-icon">🧠</div>
+                    <h3 class="tech-title">2. LLM Enhancement</h3>
+                    <p class="tech-desc">Large language models analyze each resume to extract implicit knowledge: inferred skills, project complexity, leadership signals, and technical depth that aren't explicitly stated.</p>
+                </div>
+                <div class="tech-card" data-animate>
+                    <div class="tech-icon">🎯</div>
+                    <h3 class="tech-title">3. Semantic Embeddings</h3>
+                    <p class="tech-desc">We combine explicit resume text with LLM-extracted insights to create enriched vector embeddings. This captures both what candidates say AND what they really mean.</p>
+                </div>
+                <div class="tech-card" data-animate>
+                    <div class="tech-icon">⚡</div>
+                    <h3 class="tech-title">4. Intelligent Ranking</h3>
+                    <p class="tech-desc">Find semantic matches across both explicit and inferred knowledge, then use AI reranking to surface the best candidates based on true fit—not just keyword overlap.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(124, 58, 237, 0.08)); border-radius: 1rem; border-left: 4px solid #2563eb;">
+                <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--color-dark); margin-bottom: 1rem;">
+                    🔬 The Patent-Pending Innovation
+                </h3>
+                <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1rem;">
+                    Traditional resume screening fails because it only searches what's explicitly written. Our breakthrough is using LLMs to extract <strong>implicit knowledge</strong> before embedding—capturing skills demonstrated through projects, inferred expertise, leadership signals, and technical depth.
+                </p>
+                <p style="color: var(--color-text); line-height: 1.8;">
+                    <strong>Example:</strong> A resume says "Built Django REST API." Keywords see "Django" and "REST." Our AI infers: Python expertise, backend architecture, database design, API security, documentation skills—and embeds ALL of that. When you search for "backend engineer who understands scalability," we find them.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Technology Section -->
     <section class="section tech-section" id="technology">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Enterprise-Grade Infrastructure</h2>
-                <p class="section-subtitle">Built on AWS with patent-pending LLM-enhanced technology</p>
+                <h2 class="section-title">Enterprise-Grade AI Infrastructure</h2>
+                <p class="section-subtitle">Built on AWS cloud with production-ready scalability and security</p>
             </div>
+            
             <div class="tech-grid">
-                <div class="tech-card" data-animate>
-                    <div class="tech-icon">☁️</div>
-                    <h3 class="tech-title">AWS Serverless</h3>
-                    <p class="tech-desc">Built on AWS Bedrock foundation models with automatic scaling</p>
-                </div>
-                <div class="tech-card" data-animate>
-                    <div class="tech-icon">🔒</div>
-                    <h3 class="tech-title">Enterprise-Grade Security</h3>
-                    <p class="tech-desc">SOC 2 compliant infrastructure with end-to-end encryption and GDPR compliance</p>
-                </div>
                 <div class="tech-card" data-animate>
                     <div class="tech-icon">🧠</div>
                     <h3 class="tech-title">Patent-Pending AI</h3>
-                    <p class="tech-desc">LLM-enhanced embeddings that capture implicit candidate knowledge</p>
+                    <p class="tech-desc">LLM-enhanced embeddings that capture implicit candidate knowledge. Powered by AWS Bedrock foundation models for enterprise reliability.</p>
+                </div>
+                <div class="tech-card" data-animate>
+                    <div class="tech-icon">☁️</div>
+                    <h3 class="tech-title">Serverless Architecture</h3>
+                    <p class="tech-desc">Auto-scales from 1 to 1,000+ concurrent resumes with zero infrastructure management. Built on AWS Lambda and DynamoDB for instant scalability.</p>
+                </div>
+                <div class="tech-card" data-animate>
+                    <div class="tech-icon">🔒</div>
+                    <h3 class="tech-title">Enterprise Security</h3>
+                    <p class="tech-desc">SOC 2 compliant infrastructure with end-to-end encryption, GDPR compliance, and comprehensive audit logging. Your candidate data stays secure.</p>
                 </div>
                 <div class="tech-card" data-animate>
                     <div class="tech-icon">⚡</div>
                     <h3 class="tech-title">Sub-Second Response</h3>
-                    <p class="tech-desc">Rank 100+ candidates instantly with intelligent reranking</p>
+                    <p class="tech-desc">Vector search across millions of enriched embeddings with intelligent reranking. Rank 100+ candidates instantly with true semantic understanding.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; text-align: center;">
+                <div style="display: inline-block; padding: 1.5rem 2rem; background: white; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);">
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.5rem;">
+                        ☁️ Built on AWS Cloud
+                    </h3>
+                    <p style="color: var(--color-text); line-height: 1.6; max-width: 700px;">
+                        We leverage AWS's proven AI/ML services, serverless architecture, and enterprise-grade security to deliver a production-ready solution that scales with your hiring needs.
+                    </p>
                 </div>
             </div>
         </div>
@@ -865,7 +927,7 @@
             -->
             <p class="footer-text">
                 © 2026 Aram AI Labs LLC | Pittsburgh, PA<br>
-                🔒 Patent Pending Technology | Built with AWS
+                🔒 Patent Pending Technology | ☁️ Powered by AWS Cloud
             </p>
             <div class="footer-legal">
                 <a href="privacy.html">Privacy Policy</a>
