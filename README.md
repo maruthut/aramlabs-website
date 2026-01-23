@@ -25,7 +25,7 @@ Official landing page for Aram AI Labs LLC - Patent-pending AI technology for re
 ## 📧 Contact
 
 - Website: https://aramailabs.com
-- Email: founders@aramailabs.com
+- Email: contact@aramailabs.com
 
 ---
 
