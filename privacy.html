@@ -4,127 +4,258 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Aram AI Labs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * {
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        :root {
+            --navy-900: #0B1628;
+            --navy-800: #0F1D32;
+            --navy-700: #152542;
+            --orange-500: #F97316;
+            --orange-400: #FB923C;
+            --white: #FFFFFF;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-400: #9CA3AF;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+        }
+
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: 'Inter', system-ui, sans-serif;
-            line-height: 1.6;
-            color: #334155;
-            background: #f8fafc;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--gray-700);
+            background: var(--gray-50);
+            -webkit-font-smoothing: antialiased;
         }
-        
-        .container {
-            max-width: 800px;
+
+        a { text-decoration: none; color: inherit; }
+
+        /* ===== NAV BAR ===== */
+        .nav {
+            background: var(--navy-900);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 3rem 1.5rem;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        
-        .header {
-            background: white;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--white);
         }
-        
-        .back-link {
-            display: inline-block;
-            color: #2563eb;
-            text-decoration: none;
-            margin-bottom: 1rem;
+
+        .nav-logo svg {
+            width: 36px;
+            height: 36px;
+        }
+
+        .nav-logo span {
+            color: var(--orange-500);
+        }
+
+        .nav-back {
+            color: var(--orange-400);
             font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
         }
-        
-        .back-link:hover {
-            text-decoration: underline;
+
+        .nav-back:hover {
+            color: var(--orange-500);
         }
-        
-        h1 {
-            font-size: 2rem;
-            color: #0f172a;
+
+        /* ===== PAGE CONTENT ===== */
+        .page-header {
+            background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 100%);
+            padding: 3.5rem 0 3rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--white);
             margin-bottom: 0.5rem;
         }
-        
-        .last-updated {
-            color: #64748b;
-            font-size: 0.875rem;
+
+        .page-header .last-updated {
+            color: var(--gray-400);
+            font-size: 0.9rem;
         }
-        
-        .content {
-            background: white;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+
+        .content-container {
+            max-width: 800px;
+            margin: -2rem auto 4rem;
+            padding: 0 1.5rem;
         }
-        
+
+        .content-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
         h2 {
-            font-size: 1.5rem;
-            color: #0f172a;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--navy-900);
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gray-100);
         }
-        
+
         h2:first-child {
             margin-top: 0;
         }
-        
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--navy-800);
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
         p {
             margin-bottom: 1rem;
+            color: var(--gray-600);
         }
-        
+
         ul {
             margin-left: 1.5rem;
             margin-bottom: 1rem;
         }
-        
+
         li {
             margin-bottom: 0.5rem;
+            color: var(--gray-600);
         }
-        
+
+        li strong {
+            color: var(--navy-900);
+        }
+
         .highlight {
-            background: #f1f5f9;
-            padding: 1rem;
-            border-radius: 0.375rem;
-            margin: 1rem 0;
+            background: linear-gradient(135deg, rgba(249,115,22,0.08) 0%, rgba(251,146,60,0.05) 100%);
+            border-left: 4px solid var(--orange-500);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            margin: 1.25rem 0;
         }
-        
-        a {
-            color: #2563eb;
-            text-decoration: none;
+
+        .highlight strong {
+            color: var(--navy-900);
         }
-        
-        a:hover {
+
+        .content-card a {
+            color: var(--orange-500);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .content-card a:hover {
+            color: var(--orange-400);
             text-decoration: underline;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--navy-900);
+            padding: 2.5rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer p {
+            color: var(--gray-400);
+            font-size: 0.875rem;
+            margin: 0;
+        }
+
+        .footer a {
+            color: var(--orange-400);
+            transition: color 0.2s;
+        }
+
+        .footer a:hover {
+            color: var(--orange-500);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 640px) {
+            .page-header h1 { font-size: 1.75rem; }
+            .content-card { padding: 1.5rem; }
+            .nav-inner { padding: 0 1rem; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <a href="index.html" class="back-link">← Back to Home</a>
-            <h1>Privacy Policy</h1>
-            <p class="last-updated">Last Updated: January 18, 2026</p>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="#F97316"/>
+                    <path d="M12 28L20 12L28 28H24L20 20L16 28H12Z" fill="white"/>
+                    <circle cx="20" cy="14" r="2" fill="white"/>
+                </svg>
+                Aram <span>AI</span>
+            </a>
+            <a href="index.html" class="nav-back">← Back to Home</a>
         </div>
-        
-        <div class="content">
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: January 18, 2026</p>
+    </header>
+
+    <!-- Content -->
+    <main class="content-container">
+        <div class="content-card">
+
             <h2>1. Introduction</h2>
             <p>
                 Aram AI Labs LLC ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <a href="https://aramailabs.com">aramailabs.com</a> or use our services.
             </p>
-            
+
             <div class="highlight">
                 <strong>Summary:</strong> We collect minimal information necessary to provide our AI-powered resume screening service. We do not sell your personal data to third parties.
             </div>
 
             <h2>2. Information We Collect</h2>
-            
-            <h3 style="font-size: 1.125rem; margin-top: 1rem; margin-bottom: 0.5rem;">2.1 Information You Provide</h3>
+
+            <h3>2.1 Information You Provide</h3>
             <p>We collect information that you voluntarily provide to us when you:</p>
             <ul>
                 <li>Register for early access or our pilot program</li>
@@ -140,7 +271,7 @@
                 <li>Job descriptions provided for matching</li>
             </ul>
 
-            <h3 style="font-size: 1.125rem; margin-top: 1rem; margin-bottom: 0.5rem;">2.2 Automatically Collected Information</h3>
+            <h3>2.2 Automatically Collected Information</h3>
             <p>When you visit our website, we may automatically collect:</p>
             <ul>
                 <li>Device information (browser type, operating system)</li>
@@ -173,18 +304,18 @@
 
             <h2>5. Data Sharing and Disclosure</h2>
             <p>We may share your information with:</p>
-            
-            <h3 style="font-size: 1.125rem; margin-top: 1rem; margin-bottom: 0.5rem;">5.1 Service Providers</h3>
+
+            <h3>5.1 Service Providers</h3>
             <ul>
                 <li><strong>Google Cloud Platform (GCP):</strong> Cloud infrastructure and AI processing</li>
                 <li><strong>Email Services:</strong> For communications and notifications</li>
                 <li><strong>Analytics Providers:</strong> To understand website usage</li>
             </ul>
-            
-            <h3 style="font-size: 1.125rem; margin-top: 1rem; margin-bottom: 0.5rem;">5.2 Legal Requirements</h3>
+
+            <h3>5.2 Legal Requirements</h3>
             <p>We may disclose information when required by law, court order, or to protect our rights.</p>
-            
-            <h3 style="font-size: 1.125rem; margin-top: 1rem; margin-bottom: 0.5rem;">5.3 Business Transfers</h3>
+
+            <h3>5.3 Business Transfers</h3>
             <p>In the event of a merger, acquisition, or sale of assets, your information may be transferred.</p>
 
             <h2>6. Data Security</h2>
@@ -272,7 +403,14 @@
                 Website: <a href="https://aramailabs.com">aramailabs.com</a><br>
                 Address: Pittsburgh, PA, United States
             </div>
+
         </div>
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Aram AI Labs LLC. All rights reserved. | <a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+
 </body>
 </html>
