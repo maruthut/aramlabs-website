@@ -151,7 +151,7 @@
         .nav-links .nav-cta { background: var(--orange-500); color: var(--white) !important; padding: 0.45rem 1.1rem; border-radius: var(--radius-md); font-weight: 600 !important; }
         .nav-links .nav-cta:hover { background: var(--orange-600) !important; }
 
-        .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
         .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
 
         /* ── HERO ────────────────────────────────────────────── */
@@ -261,11 +261,11 @@
             transform: translateX(14px);
             animation: pipeIn 0.45s forwards;
         }
-        .pipeline-step:nth-child(1) { animation-delay: 0.15s; }
-        .pipeline-step:nth-child(2) { animation-delay: 0.3s; }
-        .pipeline-step:nth-child(3) { animation-delay: 0.45s; }
-        .pipeline-step:nth-child(4) { animation-delay: 0.6s; }
-        .pipeline-step:nth-child(5) { animation-delay: 0.75s; }
+        .pipeline-step:nth-child(2)  { animation-delay: 0.15s; }
+        .pipeline-step:nth-child(4)  { animation-delay: 0.3s; }
+        .pipeline-step:nth-child(6)  { animation-delay: 0.45s; }
+        .pipeline-step:nth-child(8)  { animation-delay: 0.6s; }
+        .pipeline-step:nth-child(10) { animation-delay: 0.75s; }
         @keyframes pipeIn { to { opacity: 1; transform: translateX(0); } }
 
         .pipeline-icon {
@@ -687,9 +687,9 @@
             <li><a href="#about">About</a></li>
             <li><a href="#contact" class="nav-cta">Request Access</a></li>
         </ul>
-        <div class="nav-toggle" id="navToggle">
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
             <span></span><span></span><span></span>
-        </div>
+        </button>
     </div>
 </nav>
 
@@ -1163,7 +1163,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="footer-copy">© 2026 Aram AI Labs LLC · Pittsburgh, PA</div>
+            <div class="footer-copy">© 2025 Aram AI Labs LLC · Pittsburgh, PA</div>
             <div class="footer-chips">
                 <span class="footer-chip">🔒 Patent Pending</span>
                 <span class="footer-chip">☁️ Built on Google Cloud</span>
