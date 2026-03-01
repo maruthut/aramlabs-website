@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aram AI Labs - Patent-pending AI resume screening built on Google Cloud. Using Vertex AI, Cloud Functions, and Document AI to understand what resumes really mean. LLM-enhanced semantic search for enterprise talent acquisition.">
-    <meta name="keywords" content="AI resume screening, Google Cloud, Vertex AI, HR tech, ATS, talent acquisition, machine learning, semantic search, LLM embeddings">
+    <meta name="description" content="Aram AI Labs - Patent-pending multi-agentic AI that enriches resumes with hidden skills before embedding. Enterprise-grade semantic search for talent acquisition.">
+    <meta name="keywords" content="AI resume screening, multi-agentic AI, HR tech, ATS integration, talent acquisition, semantic search, resume enrichment, enterprise hiring">
     <title>Aram AI Labs - AI That Reads Between the Lines</title>
     
     <!-- Fonts -->
@@ -399,9 +399,9 @@
             flex-shrink: 0;
         }
 
-        .arch-icon.vertex { background: rgba(66, 133, 244, 0.15); }
+        .arch-icon.embed { background: rgba(66, 133, 244, 0.15); }
         .arch-icon.functions { background: rgba(52, 168, 83, 0.15); }
-        .arch-icon.firestore { background: rgba(251, 188, 4, 0.15); }
+        .arch-icon.results { background: rgba(251, 188, 4, 0.15); }
         .arch-icon.docai { background: rgba(234, 67, 53, 0.15); }
         .arch-icon.vector { background: rgba(249, 115, 22, 0.15); }
 
@@ -675,22 +675,22 @@
         .panel-visual-title { font-size: 1.25rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
         .panel-visual-desc { font-size: 0.9rem; color: rgba(255, 255, 255, 0.4); text-align: center; }
 
-        /* ===== GCP ARCHITECTURE ===== */
-        .gcp-section {
+        /* ===== ENTERPRISE INFRASTRUCTURE ===== */
+        .infra-section {
             background: linear-gradient(to bottom, var(--gray-50), var(--white));
             padding: 6rem 0;
         }
 
-        .gcp-header { text-align: center; margin-bottom: 4rem; }
+        .infra-header { text-align: center; margin-bottom: 4rem; }
 
-        .gcp-grid {
+        .infra-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
             margin-bottom: 3rem;
         }
 
-        .gcp-card {
+        .infra-card {
             background: var(--white);
             border: 1px solid var(--gray-200);
             border-radius: var(--radius-xl);
@@ -701,17 +701,18 @@
             transform: translateY(20px);
         }
 
-        .gcp-card.visible { opacity: 1; transform: translateY(0); }
+        .infra-card.visible { opacity: 1; transform: translateY(0); }
 
-        .gcp-card:hover {
+        .infra-card:hover {
             border-color: var(--orange-500);
             transform: translateY(-4px);
             box-shadow: 0 12px 40px rgba(249, 115, 22, 0.1);
         }
 
-        .gcp-card-icon {
+        .infra-card-icon {
             width: 56px; height: 56px;
             border-radius: var(--radius-lg);
+            background: rgba(249, 115, 22, 0.08);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -719,17 +720,10 @@
             font-size: 1.5rem;
         }
 
-        .gcp-card-icon.blue { background: rgba(66, 133, 244, 0.1); }
-        .gcp-card-icon.green { background: rgba(52, 168, 83, 0.1); }
-        .gcp-card-icon.yellow { background: rgba(251, 188, 4, 0.1); }
-        .gcp-card-icon.red { background: rgba(234, 67, 53, 0.1); }
-        .gcp-card-icon.purple { background: rgba(124, 58, 237, 0.1); }
-        .gcp-card-icon.orange { background: rgba(249, 115, 22, 0.1); }
+        .infra-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--navy-900); margin-bottom: 0.5rem; }
+        .infra-card p { font-size: 0.85rem; color: var(--gray-500); line-height: 1.6; }
 
-        .gcp-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--navy-900); margin-bottom: 0.5rem; }
-        .gcp-card p { font-size: 0.85rem; color: var(--gray-500); line-height: 1.6; }
-
-        .gcp-banner {
+        .infra-banner {
             background: var(--navy-900);
             border-radius: var(--radius-xl);
             padding: 2.5rem 3rem;
@@ -740,10 +734,10 @@
             flex-wrap: wrap;
         }
 
-        .gcp-banner-text h3 { font-size: 1.5rem; font-weight: 800; color: var(--white); margin-bottom: 0.5rem; }
-        .gcp-banner-text p { color: rgba(255, 255, 255, 0.5); font-size: 0.95rem; }
+        .infra-banner-text h3 { font-size: 1.5rem; font-weight: 800; color: var(--white); margin-bottom: 0.5rem; }
+        .infra-banner-text p { color: rgba(255, 255, 255, 0.5); font-size: 0.95rem; }
 
-        .gcp-badge {
+        .infra-badge {
             display: flex;
             align-items: center;
             gap: 1rem;
@@ -753,9 +747,9 @@
             border-radius: var(--radius-lg);
         }
 
-        .gcp-badge-icon { font-size: 2rem; }
-        .gcp-badge-label { font-size: 0.8rem; font-weight: 700; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 0.05em; }
-        .gcp-badge-value { font-size: 1.1rem; font-weight: 700; color: var(--white); }
+        .infra-badge-icon { font-size: 2rem; }
+        .infra-badge-label { font-size: 0.8rem; font-weight: 700; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 0.05em; }
+        .infra-badge-value { font-size: 1.1rem; font-weight: 700; color: var(--white); }
 
         /* ===== INNOVATION / PATENT ===== */
         .innovation-section {
@@ -1435,7 +1429,7 @@
             .framework-panel.active { grid-template-columns: 1fr; gap: 2rem; }
             .innovation-inner { grid-template-columns: 1fr; gap: 3rem; }
             .cta-inner { grid-template-columns: 1fr; gap: 3rem; }
-            .gcp-grid { grid-template-columns: repeat(2, 1fr); }
+            .infra-grid { grid-template-columns: repeat(2, 1fr); }
             .industries-grid { grid-template-columns: repeat(2, 1fr); }
             .services-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -1462,7 +1456,7 @@
             .hero-ctas { flex-direction: column; }
             .btn { width: 100%; justify-content: center; }
 
-            .stats-grid, .gcp-grid, .industries-grid, .services-grid, .deploy-grid { grid-template-columns: 1fr; }
+            .stats-grid, .infra-grid, .industries-grid, .services-grid, .deploy-grid { grid-template-columns: 1fr; }
 
             .leader-card {
                 grid-template-columns: 1fr;
@@ -1472,7 +1466,7 @@
 
             .leader-photo { width: 180px; height: 180px; margin: 0 auto; }
 
-            .gcp-banner { flex-direction: column; text-align: center; padding: 2rem; }
+            .infra-banner { flex-direction: column; text-align: center; padding: 2rem; }
 
             .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
             .footer-bottom { flex-direction: column; text-align: center; }
@@ -1558,8 +1552,8 @@
                         </div>
                         <div class="hero-slide" data-slide="2">
                             <div class="hero-keyword">Built for Scale.</div>
-                            <h1 class="hero-headline">Enterprise AI<br>on <span class="highlight">Google Cloud</span></h1>
-                            <p class="hero-desc">Serverless architecture on GCP — processing 100 to 1M+ resumes with sub-second semantic matching.</p>
+                            <h1 class="hero-headline">Enterprise AI<br>at <span class="highlight">Any Scale</span></h1>
+                            <p class="hero-desc">Serverless architecture processing 100 to 1M+ resumes with sub-second semantic matching.</p>
                         </div>
                     </div>
 
@@ -1575,7 +1569,7 @@
                     </div>
                 </div>
 
-                <!-- Hero visual: animated GCP architecture -->
+                <!-- Hero visual: enrichment pipeline -->
                 <div class="hero-visual">
                     <div class="hero-arch">
                         <div class="arch-node" data-delay="0">
@@ -1595,7 +1589,7 @@
                         </div>
                         <div class="arch-flow"><div class="arch-flow-line"></div></div>
                         <div class="arch-node" data-delay="400">
-                            <div class="arch-icon vertex">🧠</div>
+                            <div class="arch-icon embed">🧠</div>
                             <div>
                                 <div class="arch-label">Enriched Embedding</div>
                                 <div class="arch-sublabel">Augmented semantic vectors</div>
@@ -1611,7 +1605,7 @@
                         </div>
                         <div class="arch-flow"><div class="arch-flow-line"></div></div>
                         <div class="arch-node" data-delay="800">
-                            <div class="arch-icon firestore">📊</div>
+                            <div class="arch-icon results">📊</div>
                             <div>
                                 <div class="arch-label">Ranked Results</div>
                                 <div class="arch-sublabel">Top candidates delivered instantly</div>
@@ -1629,7 +1623,7 @@
             <div class="trust-items">
                 <div class="trust-item"><span class="trust-icon">🔒</span> Patent Pending</div>
                 <div class="trust-divider"></div>
-                <div class="trust-item"><span class="trust-icon">☁️</span> Built on Google Cloud</div>
+                <div class="trust-item"><span class="trust-icon">✅</span> SOC 2 Compliant</div>
                 <div class="trust-divider"></div>
                 <div class="trust-item"><span class="trust-icon">🧠</span> Multi-Agentic Enrichment</div>
                 <div class="trust-divider"></div>
@@ -1771,58 +1765,58 @@
         </div>
     </section>
 
-    <!-- ===== GCP ARCHITECTURE ===== -->
-    <section class="gcp-section" id="technology">
+    <!-- ===== ENTERPRISE INFRASTRUCTURE ===== -->
+    <section class="infra-section" id="technology">
         <div class="container">
-            <div class="gcp-header">
+            <div class="infra-header">
                 <div class="section-label">Infrastructure</div>
-                <h2 class="section-title">Enterprise-Grade on Google Cloud</h2>
-                <p class="section-subtitle">Production-ready AI infrastructure with auto-scaling, enterprise security, and sub-second performance.</p>
+                <h2 class="section-title">Built for Enterprise Scale</h2>
+                <p class="section-subtitle">Production-ready AI infrastructure with auto-scaling, enterprise security, and sub-second performance — from day one.</p>
             </div>
 
-            <div class="gcp-grid">
-                <div class="gcp-card animate-on-scroll stagger-1">
-                    <div class="gcp-card-icon blue">🧠</div>
-                    <h4>Vertex AI</h4>
-                    <p>Foundation models for LLM enhancement and embedding generation with enterprise reliability.</p>
+            <div class="infra-grid">
+                <div class="infra-card animate-on-scroll stagger-1">
+                    <div class="infra-card-icon">🤖</div>
+                    <h4>Foundation Model AI</h4>
+                    <p>State-of-the-art large language models power our multi-agentic enrichment engine with enterprise-grade reliability.</p>
                 </div>
-                <div class="gcp-card animate-on-scroll stagger-2">
-                    <div class="gcp-card-icon green">⚙️</div>
-                    <h4>Cloud Functions</h4>
-                    <p>Serverless pipeline that auto-scales from 1 to 1,000+ concurrent resume processing tasks.</p>
+                <div class="infra-card animate-on-scroll stagger-2">
+                    <div class="infra-card-icon">⚡</div>
+                    <h4>Serverless Auto-Scaling</h4>
+                    <p>Pipeline automatically scales from a single resume to 1,000+ concurrent processing tasks with no configuration needed.</p>
                 </div>
-                <div class="gcp-card animate-on-scroll stagger-3">
-                    <div class="gcp-card-icon red">📄</div>
-                    <h4>Document AI</h4>
-                    <p>Intelligent document parsing that reads structured data from any resume format.</p>
+                <div class="infra-card animate-on-scroll stagger-3">
+                    <div class="infra-card-icon">📄</div>
+                    <h4>Intelligent Parsing</h4>
+                    <p>Handles any resume format — PDF, DOCX, or image — with consistent, high-accuracy results.</p>
                 </div>
-                <div class="gcp-card animate-on-scroll stagger-4">
-                    <div class="gcp-card-icon yellow">🗄️</div>
-                    <h4>Firestore</h4>
-                    <p>Real-time NoSQL database for instant candidate data access and analytics.</p>
-                </div>
-                <div class="gcp-card animate-on-scroll stagger-5">
-                    <div class="gcp-card-icon purple">🔍</div>
+                <div class="infra-card animate-on-scroll stagger-4">
+                    <div class="infra-card-icon">🔍</div>
                     <h4>Vector Search</h4>
-                    <p>Semantic matching across millions of enriched embeddings with sub-second latency.</p>
+                    <p>Semantic matching across millions of enriched embeddings with sub-second query latency at any scale.</p>
                 </div>
-                <div class="gcp-card animate-on-scroll stagger-6">
-                    <div class="gcp-card-icon orange">🛡️</div>
-                    <h4>Cloud Security</h4>
-                    <p>SOC 2 compliant infrastructure with end-to-end encryption and GDPR compliance.</p>
+                <div class="infra-card animate-on-scroll stagger-5">
+                    <div class="infra-card-icon">🛡️</div>
+                    <h4>SOC 2 & GDPR Ready</h4>
+                    <p>End-to-end encryption, role-based access control, and data residency controls built into the platform.</p>
+                </div>
+                <div class="infra-card animate-on-scroll stagger-6">
+                    <div class="infra-card-icon">🔗</div>
+                    <h4>REST API First</h4>
+                    <p>Clean, well-documented APIs integrate with any ATS, HRIS, or custom HR workflow in hours, not weeks.</p>
                 </div>
             </div>
 
-            <div class="gcp-banner">
-                <div class="gcp-banner-text">
-                    <h3>☁️ 100% Built on Google Cloud Platform</h3>
-                    <p>Leveraging GCP's proven AI/ML services, serverless architecture, and enterprise-grade security.</p>
+            <div class="infra-banner">
+                <div class="infra-banner-text">
+                    <h3>🏗️ Enterprise-Grade from Day One</h3>
+                    <p>Built on proven cloud infrastructure — scalable, secure, and compliant out of the box.</p>
                 </div>
-                <div class="gcp-badge">
-                    <div class="gcp-badge-icon">🚀</div>
+                <div class="infra-badge">
+                    <div class="infra-badge-icon">🚀</div>
                     <div>
-                        <div class="gcp-badge-label">Designed to Scale</div>
-                        <div class="gcp-badge-value">100 → 1M+ Resumes</div>
+                        <div class="infra-badge-label">Designed to Scale</div>
+                        <div class="infra-badge-value">100 → 1M+ Resumes</div>
                     </div>
                 </div>
             </div>
@@ -2129,7 +2123,7 @@
                                   text-anchor="middle">AI LABS</text>
                         </svg>
                     </div>
-                    <p>Patent-pending AI technology that understands the true meaning of resumes. Built on Google Cloud for enterprise-grade reliability.</p>
+                    <p>Patent-pending multi-agentic AI that enriches resumes with hidden skills before embedding — enterprise-grade reliability at any scale.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Product</h4>
@@ -2161,7 +2155,7 @@
                 <div class="footer-copy">© 2026 Aram AI Labs LLC · Pittsburgh, PA</div>
                 <div class="footer-badges">
                     <span class="footer-badge">🔒 Patent Pending</span>
-                    <span class="footer-badge">☁️ Google Cloud</span>
+                    <span class="footer-badge">🛡️ SOC 2 Ready</span>
                 </div>
             </div>
         </div>
@@ -2273,7 +2267,7 @@
             rootMargin: '0px 0px -40px 0px'
         });
 
-        document.querySelectorAll('.animate-on-scroll, .stat-card, .gcp-card, .industry-card, .service-card').forEach(el => {
+        document.querySelectorAll('.animate-on-scroll, .stat-card, .infra-card, .industry-card, .service-card').forEach(el => {
             scrollObserver.observe(el);
         });
 
