@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aram AI Labs — Patent-pending multi-agentic AI that enriches resumes with implicit skills before embedding. Built on Google Cloud Platform for enterprise talent acquisition.">
-    <meta name="keywords" content="AI resume screening, multi-agentic AI, implicit skills, LLM embeddings, HR tech, ATS integration, talent acquisition, semantic search, Vertex AI, Google Cloud">
-    <meta property="og:title" content="Aram AI Labs — AI That Reads Between the Lines">
-    <meta property="og:description" content="Patent-pending multi-agentic AI that enriches resumes with implicit skills before embedding.">
+    <meta name="description" content="Aram AI Labs — Building AI that ensures fairness, ethics, and equity at every societal inflection point. Our first product, Rankify, brings fairness to hiring.">
+    <meta name="keywords" content="Aram AI Labs, AI fairness, ethical AI, bias control, Rankify, HR tech, talent acquisition, Google Cloud, multi-agentic AI, patent pending">
+    <meta property="og:title" content="Aram AI Labs — Eternal Fairness Through AI">
+    <meta property="og:description" content="When AI reorders society, we make sure fairness comes first. Starting with hiring.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aramailabs.com">
-    <title>Aram AI Labs — AI That Reads Between the Lines</title>
+    <title>Aram AI Labs — Eternal Fairness Through AI</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='10' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23C87E2C'/><stop offset='0.6' stop-color='%236B3209'/><stop offset='1' stop-color='%232A1104'/></linearGradient></defs><text x='50%' y='72%' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='900' font-size='22' fill='white'>A</text></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,7 +60,7 @@
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
-        /* ── TYPOGRAPHY HELPERS ─────────────────────────────── */
+        /* ── TYPOGRAPHY ─────────────────────────────────────── */
         .section-label {
             display: inline-block;
             font-size: 0.72rem;
@@ -70,7 +70,6 @@
             color: var(--orange-500);
             margin-bottom: 0.75rem;
         }
-
         .section-title {
             font-size: clamp(1.75rem, 3vw, 2.5rem);
             font-weight: 800;
@@ -78,14 +77,12 @@
             letter-spacing: -0.025em;
             margin-bottom: 1rem;
         }
-
         .section-subtitle {
             font-size: 1.05rem;
             color: var(--gray-500);
             line-height: 1.75;
             max-width: 600px;
         }
-
         .section-header { text-align: center; margin-bottom: 4rem; }
         .section-header .section-subtitle { margin: 0 auto; }
 
@@ -94,52 +91,44 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.875rem 1.75rem;
-            border-radius: var(--radius-lg);
-            font-size: 0.95rem;
+            padding: 0.85rem 1.75rem;
+            border-radius: var(--radius-md);
+            font-size: 0.92rem;
             font-weight: 600;
             text-decoration: none;
             cursor: pointer;
-            border: none;
-            transition: all 0.2s ease;
             font-family: inherit;
+            transition: all 0.2s ease;
+            border: none;
         }
-
-        .btn-primary { background: var(--orange-500); color: var(--white); }
-        .btn-primary:hover {
-            background: var(--orange-600);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 28px rgba(249,115,22,0.35);
+        .btn-primary {
+            background: var(--orange-500);
+            color: var(--white);
         }
-
+        .btn-primary:hover { background: var(--orange-600); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(249,115,22,0.3); }
         .btn-ghost {
             background: transparent;
             color: var(--white);
-            border: 1.5px solid rgba(255,255,255,0.22);
+            border: 1.5px solid rgba(255,255,255,0.2);
         }
-        .btn-ghost:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
+        .btn-ghost:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.04); }
+        .btn-outline {
+            background: transparent;
+            color: var(--orange-500);
+            border: 1.5px solid var(--orange-500);
+        }
+        .btn-outline:hover { background: var(--orange-500); color: var(--white); }
 
         /* ── NAV ────────────────────────────────────────────── */
         .nav {
             position: fixed;
             top: 0; left: 0; right: 0;
             z-index: 100;
-            background: rgba(11,22,40,0.96);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+            background: rgba(11,22,40,0.92);
+            backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255,255,255,0.06);
-            transition: border-color 0.3s;
         }
-
-        .nav-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 68px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; }
 
         .nav-logo {
             display: flex;
@@ -150,11 +139,7 @@
         .nav-logo-icon {
             width: 40px; height: 40px;
             border-radius: 12px;
-            background: linear-gradient(155deg,
-                #C87E2C 0%,
-                #A0581A 30%,
-                #6B3209 60%,
-                #2A1104 100%);
+            background: linear-gradient(155deg, #C87E2C 0%, #A0581A 30%, #6B3209 60%, #2A1104 100%);
             box-shadow:
                 inset 0 1px 0 rgba(255,200,100,0.4),
                 inset 0 -1px 0 rgba(0,0,0,0.5),
@@ -173,22 +158,21 @@
         .nav-logo-sub  { font-size: 0.58rem; font-weight: 700; color: rgba(255,255,255,0.35); letter-spacing: 0.18em; text-transform: uppercase; line-height: 1; margin-top: 2px; }
 
         .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
-        .nav-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+        .nav-links a { font-size: 0.88rem; font-weight: 500; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
         .nav-links a:hover { color: var(--white); }
-        .nav-links .nav-cta { background: var(--orange-500); color: var(--white) !important; padding: 0.45rem 1.1rem; border-radius: var(--radius-md); font-weight: 600 !important; }
-        .nav-links .nav-cta:hover { background: var(--orange-600) !important; }
+        .nav-cta { background: var(--orange-500); color: var(--white) !important; padding: 0.5rem 1.15rem; border-radius: var(--radius-md); font-weight: 600 !important; }
+        .nav-cta:hover { background: var(--orange-600); }
 
         .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
         .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
 
-        /* ── HERO ────────────────────────────────────────────── */
+        /* ── HERO ───────────────────────────────────────────── */
         .hero {
             background: var(--navy-900);
-            padding: 8rem 0 5.5rem;
+            padding: 9rem 0 6rem;
             overflow: hidden;
             position: relative;
         }
-
         .hero::before {
             content: '';
             position: absolute;
@@ -197,8 +181,7 @@
             background: radial-gradient(circle, rgba(249,115,22,0.09) 0%, transparent 70%);
             pointer-events: none;
         }
-
-        .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+        .hero-content { max-width: 720px; margin: 0 auto; text-align: center; }
 
         .hero-badge {
             display: inline-flex;
@@ -213,7 +196,6 @@
             color: var(--orange-400);
             margin-bottom: 1.5rem;
         }
-
         .hero-headline {
             font-size: clamp(2.4rem, 4.5vw, 3.75rem);
             font-weight: 900;
@@ -223,114 +205,26 @@
             margin-bottom: 1.5rem;
         }
         .hero-headline .highlight { color: var(--orange-500); }
-
         .hero-desc {
-            font-size: 1.1rem;
-            color: rgba(255,255,255,0.58);
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.55);
             line-height: 1.75;
-            margin-bottom: 2.25rem;
-            max-width: 460px;
+            margin-bottom: 2.5rem;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
         }
+        .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
 
-        .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
-
-        .hero-proof {
-            margin-top: 2.25rem;
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-            flex-wrap: wrap;
+        /* Hero animations */
+        @keyframes heroFadeUp {
+            from { opacity: 0; transform: translateY(26px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
-        .hero-proof-label { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
-        .hero-proof-tags { display: flex; gap: 0.6rem; flex-wrap: wrap; }
-        .hero-proof-tag {
-            font-size: 0.73rem;
-            font-weight: 600;
-            color: rgba(255,255,255,0.45);
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: var(--radius-sm);
-            padding: 0.2rem 0.55rem;
-        }
-
-        /* Pipeline visual */
-        .pipeline-card {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: var(--radius-2xl);
-            padding: 1.75rem;
-            position: relative;
-            overflow: hidden;
-        }
-        .pipeline-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--orange-500), transparent);
-            background-size: 200% auto;
-            animation: borderShimmer 2.5s linear infinite;
-        }
-
-        .pipeline-title {
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: rgba(255,255,255,0.3);
-            margin-bottom: 1.25rem;
-        }
-
-        .pipeline-step {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 0.7rem 0;
-            opacity: 0;
-            transform: translateX(14px);
-            animation: pipeIn 0.45s forwards;
-        }
-        .pipeline-step:nth-child(2)  { animation-delay: 0.15s; }
-        .pipeline-step:nth-child(4)  { animation-delay: 0.3s; }
-        .pipeline-step:nth-child(6)  { animation-delay: 0.45s; }
-        .pipeline-step:nth-child(8)  { animation-delay: 0.6s; }
-        .pipeline-step:nth-child(10) { animation-delay: 0.75s; }
-        @keyframes pipeIn { to { opacity: 1; transform: translateX(0); } }
-
-        .pipeline-icon {
-            width: 38px; height: 38px;
-            border-radius: var(--radius-md);
-            background: rgba(249,115,22,0.1);
-            border: 1px solid rgba(249,115,22,0.2);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1rem; flex-shrink: 0;
-        }
-        .pipeline-info { flex: 1; }
-        .pipeline-label { font-size: 0.88rem; font-weight: 600; color: var(--white); }
-        .pipeline-sub   { font-size: 0.75rem; color: rgba(255,255,255,0.38); }
-
-        .pipeline-connector {
-            width: 2px; height: 16px;
-            background: linear-gradient(to bottom, rgba(249,115,22,0.35), transparent);
-            margin-left: 18px;
-        }
-
-        .pipeline-footer {
-            margin-top: 1.25rem;
-            padding-top: 1.25rem;
-            border-top: 1px solid rgba(255,255,255,0.06);
-        }
-        .pipeline-footer-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.28); margin-bottom: 0.5rem; }
-        .pipeline-footer-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-        .pipeline-tag {
-            font-size: 0.75rem;
-            font-weight: 500;
-            background: rgba(249,115,22,0.08);
-            border: 1px solid rgba(249,115,22,0.15);
-            color: var(--orange-400);
-            padding: 0.18rem 0.6rem;
-            border-radius: 100px;
-        }
+        .hero-badge    { animation: heroFadeUp 0.65s cubic-bezier(0.16,1,0.3,1) 0.05s both; }
+        .hero-headline { animation: heroFadeUp 0.75s cubic-bezier(0.16,1,0.3,1) 0.18s both; }
+        .hero-desc     { animation: heroFadeUp 0.65s cubic-bezier(0.16,1,0.3,1) 0.33s both; }
+        .hero-ctas     { animation: heroFadeUp 0.65s cubic-bezier(0.16,1,0.3,1) 0.46s both; }
 
         /* ── TRUST STRIP ─────────────────────────────────────── */
         .trust-strip {
@@ -343,120 +237,188 @@
         .trust-item { display: flex; align-items: center; gap: 0.45rem; font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.42); }
         .trust-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.14); }
 
-        /* ── PROBLEM ─────────────────────────────────────────── */
-        .problem-section { background: var(--navy-950); padding: 6rem 0; }
-
-        .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-
-        .problem-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: var(--radius-xl);
-            padding: 2rem;
-            transition: border-color 0.3s;
-        }
-        .problem-card:hover { border-color: rgba(249,115,22,0.25); }
-
-        .problem-stat { font-size: 2.75rem; font-weight: 900; color: var(--orange-500); line-height: 1; margin-bottom: 0.25rem; }
-        .problem-stat-note { font-size: 0.72rem; color: rgba(255,255,255,0.3); font-weight: 500; margin-bottom: 1.25rem; }
-        .problem-title { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 0.6rem; }
-        .problem-desc { font-size: 0.86rem; color: rgba(255,255,255,0.48); line-height: 1.7; }
-
-        /* ── SOLUTION ─────────────────────────────────────────── */
-        .solution-section { background: var(--white); padding: 6rem 0; }
-
-        .solution-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-
-        .solution-text .section-title { margin-bottom: 1.25rem; }
-        .solution-text p { color: var(--gray-500); font-size: 1rem; line-height: 1.8; margin-bottom: 1.1rem; }
-
-        .solution-callout {
+        /* ── WHY NOW ─────────────────────────────────────────── */
+        .whynow-section { background: var(--white); padding: 6rem 0; }
+        .whynow-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+        .whynow-text .section-title { margin-bottom: 1.25rem; }
+        .whynow-text p { color: var(--gray-500); font-size: 1rem; line-height: 1.8; margin-bottom: 1.1rem; }
+        .whynow-callout {
             background: var(--orange-100);
             border-left: 3px solid var(--orange-500);
             border-radius: 0 var(--radius-md) var(--radius-md) 0;
             padding: 1.1rem 1.4rem;
             margin-top: 1.5rem;
         }
-        .solution-callout p { color: var(--gray-700); font-size: 0.9rem; margin-bottom: 0; }
-        .solution-callout strong { color: var(--orange-600); }
+        .whynow-callout p { color: var(--gray-700); font-size: 0.9rem; margin-bottom: 0; }
+        .whynow-callout strong { color: var(--orange-600); }
 
-        /* Comparison visual */
-        .compare-stack { display: flex; flex-direction: column; gap: 1rem; }
+        .whynow-visual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .whynow-stat-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-xl);
+            padding: 1.75rem;
+            text-align: center;
+            transition: border-color 0.3s;
+        }
+        .whynow-stat-card:hover { border-color: var(--orange-500); }
+        .whynow-stat-card:nth-child(2) { transform: translateY(1.5rem); }
+        .whynow-stat-card:nth-child(3) { transform: translateY(-1.5rem); }
+        .whynow-stat-num { font-size: 2.25rem; font-weight: 900; color: var(--orange-500); line-height: 1; margin-bottom: 0.3rem; }
+        .whynow-stat-label { font-size: 0.78rem; color: var(--gray-500); font-weight: 500; }
 
-        .compare-box { border-radius: var(--radius-xl); padding: 1.5rem; }
-        .compare-box.before { background: var(--gray-50); border: 1px solid var(--gray-200); }
-        .compare-box.after  { background: var(--navy-900); border: 1px solid rgba(249,115,22,0.2); }
+        /* ── VALUES ─────────────────────────────────────────── */
+        .values-section { background: var(--navy-950); padding: 6rem 0; }
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .value-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: var(--radius-xl);
+            padding: 2.25rem;
+            transition: border-color 0.3s;
+        }
+        .value-card:hover { border-color: rgba(249,115,22,0.25); }
+        .value-icon { font-size: 2.25rem; margin-bottom: 1rem; }
+        .value-title { font-size: 1.08rem; font-weight: 700; color: var(--white); margin-bottom: 0.6rem; }
+        .value-desc { font-size: 0.86rem; color: rgba(255,255,255,0.48); line-height: 1.7; }
 
-        .compare-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.65rem; }
-        .compare-box.before .compare-label { color: var(--gray-500); }
-        .compare-box.after  .compare-label { color: var(--orange-400); }
+        /* ── AI BELIEF ─────────────────────────────────────── */
+        .belief-section { background: var(--white); padding: 6rem 0; }
+        .belief-inner { max-width: 780px; margin: 0 auto; text-align: center; }
+        .belief-inner .section-title { margin-bottom: 1.5rem; }
+        .belief-inner p { color: var(--gray-500); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem; }
+        .belief-pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 3rem; }
+        .belief-pillar {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-xl);
+            padding: 1.5rem 1rem;
+            text-align: center;
+            transition: border-color 0.3s;
+        }
+        .belief-pillar:hover { border-color: var(--orange-500); }
+        .belief-pillar-icon { font-size: 1.5rem; margin-bottom: 0.65rem; }
+        .belief-pillar-title { font-size: 0.88rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.3rem; }
+        .belief-pillar-desc { font-size: 0.78rem; color: var(--gray-500); line-height: 1.55; }
 
-        .compare-quote { font-size: 0.88rem; font-style: italic; margin-bottom: 0.75rem; }
-        .compare-box.before .compare-quote { color: var(--gray-600); }
-        .compare-box.after  .compare-quote { color: rgba(255,255,255,0.65); }
-
-        .compare-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-        .compare-tag { font-size: 0.76rem; font-weight: 500; padding: 0.2rem 0.6rem; border-radius: 100px; }
-        .compare-box.before .compare-tag { background: var(--gray-200); color: var(--gray-600); }
-        .compare-box.after  .compare-tag { background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.2); color: var(--orange-400); }
-
-        .compare-arrow { text-align: center; font-size: 0.85rem; font-weight: 600; color: var(--orange-500); padding: 0.25rem 0; }
-
-        /* ── HOW IT WORKS ─────────────────────────────────────── */
-        .hiw-section { background: var(--gray-50); padding: 6rem 0; }
-
-        .steps-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 1rem; position: relative; }
-
-        .steps-row::before {
+        /* ── PRODUCTS ─────────────────────────────────────── */
+        .products-section { background: var(--gray-50); padding: 6rem 0; }
+        .product-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-2xl);
+            padding: 3rem;
+            box-shadow: var(--shadow-md);
+        }
+        .product-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(249,115,22,0.08);
+            border: 1px solid rgba(249,115,22,0.2);
+            border-radius: 100px;
+            padding: 0.3rem 0.85rem;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--orange-500);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+        .product-name {
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            font-weight: 900;
+            color: var(--gray-900);
+            margin-bottom: 0.65rem;
+            letter-spacing: -0.03em;
+        }
+        .product-tagline { font-size: 1.05rem; color: var(--orange-500); font-weight: 600; margin-bottom: 1.25rem; }
+        .product-desc { font-size: 0.95rem; color: var(--gray-500); line-height: 1.75; margin-bottom: 1.75rem; }
+        .product-features { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; margin-bottom: 2rem; }
+        .product-features li { display: flex; align-items: center; gap: 0.65rem; font-size: 0.9rem; color: var(--gray-600); }
+        .product-features li::before {
+            content: '\2713';
+            width: 20px; height: 20px;
+            background: rgba(249,115,22,0.1);
+            border: 1px solid rgba(249,115,22,0.25);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.68rem;
+            color: var(--orange-500);
+            flex-shrink: 0;
+        }
+        .product-visual {
+            background: var(--navy-900);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-visual::before {
             content: '';
             position: absolute;
-            top: 24px;
-            left: calc(12.5% + 0px);
-            right: calc(12.5% + 0px);
+            top: 0; left: 0; right: 0;
             height: 2px;
-            background: linear-gradient(90deg, var(--orange-500), rgba(249,115,22,0.15));
+            background: linear-gradient(90deg, transparent, var(--orange-500), transparent);
+            background-size: 200% auto;
+            animation: borderShimmer 2.5s linear infinite;
         }
-
-        .step {
-            padding: 0 1.5rem;
+        @keyframes borderShimmer {
+            0%   { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        .product-pipeline-title {
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 1rem;
+        }
+        .product-pipeline-step {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 0.55rem 0;
+        }
+        .product-pipeline-icon {
+            width: 32px; height: 32px;
+            border-radius: var(--radius-md);
+            background: rgba(249,115,22,0.1);
+            border: 1px solid rgba(249,115,22,0.2);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.85rem; flex-shrink: 0;
+        }
+        .product-pipeline-label { font-size: 0.82rem; font-weight: 600; color: var(--white); }
+        .product-pipeline-sub { font-size: 0.7rem; color: rgba(255,255,255,0.38); }
+        .product-pipeline-connector {
+            width: 2px; height: 10px;
+            background: linear-gradient(to bottom, rgba(249,115,22,0.35), transparent);
+            margin-left: 15px;
+        }
+        .product-coming {
+            margin-top: 2.5rem;
+            padding: 1.75rem;
+            background: var(--gray-50);
+            border: 1px dashed var(--gray-200);
+            border-radius: var(--radius-xl);
             text-align: center;
         }
-
-        .step-num {
-            width: 48px; height: 48px;
-            border-radius: 50%;
-            background: var(--orange-500);
-            color: var(--white);
-            font-size: 1rem;
-            font-weight: 800;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 1.5rem;
-            position: relative; z-index: 1;
-            box-shadow: 0 0 0 6px var(--gray-50);
-        }
-
-        .step-emoji { font-size: 1.75rem; margin-bottom: 0.85rem; }
-        .step-title { font-size: 0.98rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.5rem; }
-        .step-desc  { font-size: 0.83rem; color: var(--gray-500); line-height: 1.65; }
-
-        /* ── DEMO ─────────────────────────────────────────────── */
-        .demo-section { background: var(--white); padding: 5rem 0; }
-        .demo-wrap { max-width: 800px; margin: 0 auto; }
-        .demo-embed {
-            position: relative;
-            padding-bottom: 56.25%;
-            border-radius: var(--radius-2xl);
-            overflow: hidden;
-            box-shadow: var(--shadow-xl);
-        }
-        .demo-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .demo-caption { text-align: center; font-size: 0.85rem; color: var(--gray-400); margin-top: 1.1rem; }
+        .product-coming-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray-400); margin-bottom: 0.5rem; }
+        .product-coming-title { font-size: 1.1rem; font-weight: 700; color: var(--gray-700); margin-bottom: 0.35rem; }
+        .product-coming-desc { font-size: 0.85rem; color: var(--gray-500); }
 
         /* ── GCP SECTION ──────────────────────────────────────── */
         .gcp-section { background: var(--white); padding: 6rem 0; border-top: 1px solid var(--gray-100); }
-
         .gcp-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2.5rem; }
-
         .gcp-card {
             display: flex; gap: 1.25rem;
             background: var(--gray-50);
@@ -466,7 +428,6 @@
             transition: all 0.3s ease;
         }
         .gcp-card:hover { border-color: var(--orange-500); box-shadow: var(--shadow-md); }
-
         .gcp-icon {
             width: 48px; height: 48px;
             border-radius: var(--radius-md);
@@ -476,7 +437,6 @@
         }
         .gcp-card h4 { font-size: 1rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.35rem; }
         .gcp-card p  { font-size: 0.84rem; color: var(--gray-500); line-height: 1.65; }
-
         .gcp-banner {
             background: var(--navy-900);
             border-radius: var(--radius-2xl);
@@ -496,60 +456,35 @@
             color: rgba(255,255,255,0.65);
         }
 
-        /* ── SECURITY ─────────────────────────────────────────── */
-        .security-section { background: var(--gray-50); padding: 6rem 0; }
-
-        .security-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
-
-        .security-card {
-            background: var(--white);
-            border: 1px solid var(--gray-200);
-            border-radius: var(--radius-xl);
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        .security-card:hover { border-color: var(--orange-500); box-shadow: var(--shadow-sm); }
-
-        .security-icon  { font-size: 2rem; margin-bottom: 1rem; }
-        .security-title { font-size: 0.95rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.45rem; }
-        .security-desc  { font-size: 0.82rem; color: var(--gray-500); line-height: 1.65; }
-
         /* ── TEAM ─────────────────────────────────────────────── */
-        .team-section { background: var(--white); padding: 6rem 0; }
-
+        .team-section { background: var(--gray-50); padding: 6rem 0; }
         .team-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-
         .team-text .section-title { margin-bottom: 1.25rem; }
         .team-text p { color: var(--gray-500); font-size: 1rem; line-height: 1.8; margin-bottom: 1.1rem; }
-
         .team-card {
-            background: var(--gray-50);
+            background: var(--white);
             border: 1px solid var(--gray-200);
             border-radius: var(--radius-2xl);
             padding: 2.5rem;
             text-align: center;
         }
-
         .team-photo { width: 116px; height: 116px; border-radius: 50%; object-fit: cover; border: 3px solid var(--white); box-shadow: var(--shadow-md); margin-bottom: 1.1rem; }
         .team-name { font-size: 1.1rem; font-weight: 800; color: var(--gray-900); margin-bottom: 0.3rem; }
         .team-role { font-size: 0.83rem; font-weight: 600; color: var(--orange-500); margin-bottom: 1rem; }
-
         .team-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; margin-bottom: 1.1rem; }
         .team-chip {
             font-size: 0.73rem;
-            background: var(--white);
+            background: var(--gray-50);
             border: 1px solid var(--gray-200);
             color: var(--gray-600);
             padding: 0.18rem 0.6rem;
             border-radius: 100px;
         }
-
         .team-bio { font-size: 0.86rem; color: var(--gray-500); line-height: 1.7; margin-bottom: 1.25rem; }
         .team-link { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; font-weight: 600; color: var(--orange-500); text-decoration: none; }
         .team-link:hover { color: var(--orange-600); }
 
-        /* ── CTA / FORM ───────────────────────────────────────── */
+        /* ── CTA ───────────────────────────────────────────── */
         .cta-section {
             background: var(--navy-900);
             padding: 6rem 0;
@@ -563,78 +498,14 @@
             background: radial-gradient(circle, rgba(249,115,22,0.1) 0%, transparent 70%);
             pointer-events: none;
         }
-
-        .cta-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-
-        .cta-text .section-title { color: var(--white); margin-bottom: 1rem; }
-        .cta-text p { color: rgba(255,255,255,0.52); font-size: 1rem; line-height: 1.75; margin-bottom: 2rem; }
-
-        .cta-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
-        .cta-bullets li { display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; color: rgba(255,255,255,0.68); }
-        .cta-bullets li::before {
-            content: '✓';
-            width: 20px; height: 20px;
-            background: rgba(249,115,22,0.15);
-            border: 1px solid rgba(249,115,22,0.3);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 0.68rem;
-            color: var(--orange-400);
-            flex-shrink: 0;
-        }
-
-        .form-card {
-            background: var(--white);
-            border-radius: var(--radius-2xl);
-            padding: 2.25rem 2rem;
-            box-shadow: var(--shadow-xl);
-        }
-        .form-card h3 { font-size: 1.2rem; font-weight: 800; color: var(--gray-900); margin-bottom: 0.3rem; }
-        .form-card > p { font-size: 0.86rem; color: var(--gray-500); margin-bottom: 1.6rem; }
-
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-        .form-group { margin-bottom: 0.9rem; }
-        .form-group label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--gray-700); margin-bottom: 0.35rem; }
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%; padding: 0.7rem 0.9rem;
-            border: 1.5px solid var(--gray-200);
-            border-radius: var(--radius-md);
-            font-size: 0.88rem; color: var(--gray-900);
-            font-family: inherit; background: var(--white);
-            transition: border-color 0.2s;
-        }
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus { outline: none; border-color: var(--orange-500); }
-        .form-group textarea { resize: vertical; min-height: 70px; }
-
-        .form-submit {
-            width: 100%; padding: 0.85rem;
-            background: var(--orange-500); color: var(--white);
-            border: none; border-radius: var(--radius-md);
-            font-size: 0.95rem; font-weight: 700;
-            cursor: pointer; font-family: inherit;
-            margin-top: 0.4rem;
-            transition: all 0.2s ease;
-        }
-        .form-submit:hover { background: var(--orange-600); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(249,115,22,0.3); }
-
-        .form-note { text-align: center; font-size: 0.76rem; color: var(--gray-400); margin-top: 0.65rem; }
-
-        .form-error {
-            background: #FEF2F2; border: 1px solid #FECACA;
-            color: #DC2626; border-radius: var(--radius-md);
-            padding: 0.7rem 0.9rem; font-size: 0.84rem;
-            margin-bottom: 1rem; display: none;
-        }
+        .cta-inner { max-width: 640px; margin: 0 auto; text-align: center; }
+        .cta-inner .section-title { color: var(--white); margin-bottom: 1rem; }
+        .cta-inner p { color: rgba(255,255,255,0.52); font-size: 1.05rem; line-height: 1.75; margin-bottom: 2.5rem; }
+        .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
         /* ── FOOTER ───────────────────────────────────────────── */
         .footer { background: var(--navy-950); padding: 3rem 0 2rem; border-top: 1px solid rgba(255,255,255,0.05); }
-
         .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
-
         .footer-brand-name {
             display: flex; align-items: center; gap: 0.6rem;
             margin-bottom: 0.7rem;
@@ -642,11 +513,7 @@
         .footer-logo-icon {
             width: 32px; height: 32px;
             border-radius: 10px;
-            background: linear-gradient(155deg,
-                #C87E2C 0%,
-                #A0581A 30%,
-                #6B3209 60%,
-                #2A1104 100%);
+            background: linear-gradient(155deg, #C87E2C 0%, #A0581A 30%, #6B3209 60%, #2A1104 100%);
             box-shadow:
                 inset 0 1px 0 rgba(255,200,100,0.4),
                 inset 0 -1px 0 rgba(0,0,0,0.5),
@@ -663,64 +530,29 @@
         .footer-brand p { font-size: 0.83rem; color: rgba(255,255,255,0.38); line-height: 1.7; margin-bottom: 1.1rem; }
         .footer-chips { display: flex; gap: 0.5rem; flex-wrap: wrap; }
         .footer-chip { font-size: 0.7rem; font-weight: 600; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.38); padding: 0.22rem 0.6rem; border-radius: var(--radius-sm); }
-
         .footer-col h4 { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.4); margin-bottom: 1rem; }
         .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
         .footer-col ul a { font-size: 0.86rem; color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.2s; }
         .footer-col ul a:hover { color: var(--white); }
-
         .footer-bottom { padding-top: 1.75rem; border-top: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
         .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.28); }
 
-        /* ── MODAL ─────────────────────────────────────────────── */
-        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); z-index: 200; display: none; align-items: center; justify-content: center; padding: 2rem; }
-        .modal-overlay.open { display: flex; }
-        .modal-card { background: var(--white); border-radius: var(--radius-2xl); padding: 2.75rem 2.25rem; text-align: center; max-width: 400px; width: 100%; box-shadow: var(--shadow-xl); }
-        .modal-icon { font-size: 2.75rem; margin-bottom: 0.75rem; }
-        .modal-card h3 { font-size: 1.4rem; font-weight: 800; color: var(--gray-900); margin-bottom: 0.5rem; }
-        .modal-card p { color: var(--gray-500); font-size: 0.92rem; margin-bottom: 1.5rem; }
-        .modal-btn { padding: 0.75rem 2rem; background: var(--orange-500); color: var(--white); border: none; border-radius: var(--radius-md); font-size: 0.92rem; font-weight: 600; cursor: pointer; font-family: inherit; }
-
-        /* ── ANIMATION HELPERS ────────────────────────────────── */
+        /* ── ANIMATION ────────────────────────────────────────── */
         .fade-up { opacity: 0; transform: translateY(22px); transition: all 0.55s cubic-bezier(0.16,1,0.3,1); }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
         .d1 { transition-delay: 0.1s; } .d2 { transition-delay: 0.2s; }
         .d3 { transition-delay: 0.3s; } .d4 { transition-delay: 0.4s; }
 
-        /* ── HERO LOAD ANIMATIONS ─────────────────────────────── */
-        @keyframes heroFadeUp {
-            from { opacity: 0; transform: translateY(26px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-        .hero-badge    { animation: heroFadeUp 0.65s cubic-bezier(0.16,1,0.3,1) 0.05s both; }
-        .hero-headline { animation: heroFadeUp 0.75s cubic-bezier(0.16,1,0.3,1) 0.18s both; }
-        .hero-desc     { animation: heroFadeUp 0.65s cubic-bezier(0.16,1,0.3,1) 0.33s both; }
-        .hero-ctas     { animation: heroFadeUp 0.65s cubic-bezier(0.16,1,0.3,1) 0.46s both; }
-        .hero-proof    { animation: heroFadeUp 0.65s cubic-bezier(0.16,1,0.3,1) 0.56s both; }
-
-        /* ── PIPELINE CARD FLOAT ──────────────────────────────── */
-        @keyframes cardFloat {
-            0%, 100% { transform: translateY(0px); }
-            50%      { transform: translateY(-10px); }
-        }
-        .hero-visual { animation: cardFloat 5.5s ease-in-out infinite; }
-
-        /* ── BORDER SHIMMER ───────────────────────────────────── */
-        @keyframes borderShimmer {
-            0%   { background-position: -200% center; }
-            100% { background-position: 200% center; }
-        }
-
         /* ── RESPONSIVE ───────────────────────────────────────── */
         @media (max-width: 1024px) {
-            .hero-inner, .solution-inner, .team-inner, .cta-inner { grid-template-columns: 1fr; gap: 3rem; }
-            .hero-visual { display: none; }
-            .steps-row { grid-template-columns: repeat(2, 1fr); }
-            .steps-row::before { display: none; }
+            .whynow-inner, .team-inner { grid-template-columns: 1fr; gap: 3rem; }
+            .product-card { grid-template-columns: 1fr; gap: 2.5rem; }
             .gcp-cards { grid-template-columns: 1fr; }
-            .security-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
-            .problem-grid { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: 1fr; }
+            .belief-pillars { grid-template-columns: repeat(2, 1fr); }
+            .whynow-stat-card:nth-child(2),
+            .whynow-stat-card:nth-child(3) { transform: none; }
         }
 
         @media (max-width: 768px) {
@@ -737,11 +569,10 @@
             .hero-headline { font-size: 2.2rem; }
             .hero-ctas { flex-direction: column; }
             .hero-ctas .btn { width: 100%; justify-content: center; }
-            .steps-row { grid-template-columns: 1fr; }
-            .security-grid { grid-template-columns: 1fr; }
+            .belief-pillars { grid-template-columns: 1fr; }
+            .whynow-visual { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
             .footer-bottom { flex-direction: column; text-align: center; }
-            .form-row { grid-template-columns: 1fr; }
             .trust-inner { gap: 1.1rem; }
             .trust-dot { display: none; }
         }
@@ -752,7 +583,7 @@
 <!-- ===== NAV ===== -->
 <nav class="nav" id="nav">
     <div class="nav-inner">
-        <a href="#" class="nav-logo">
+        <a href="/" class="nav-logo">
             <div class="nav-logo-icon">A</div>
             <div class="nav-logo-text">
                 <span class="nav-logo-name">ARAM</span>
@@ -760,12 +591,12 @@
             </div>
         </a>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#problem">Problem</a></li>
-            <li><a href="#solution">Solution</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#vision">Vision</a></li>
+            <li><a href="#values">Values</a></li>
+            <li><a href="#products">Products</a></li>
             <li><a href="#technology">Technology</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#contact" class="nav-cta">Request Access</a></li>
+            <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
         </ul>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
             <span></span><span></span><span></span>
@@ -776,83 +607,18 @@
 <!-- ===== HERO ===== -->
 <section class="hero" id="home">
     <div class="container">
-        <div class="hero-inner">
-            <div class="hero-content">
-                <div class="hero-badge">🔬 Patent Pending &nbsp;·&nbsp; Multi-Agentic Enrichment</div>
-                <h1 class="hero-headline">
-                    Hire Based on What<br>
-                    Candidates <span class="highlight">Actually Know</span>
-                </h1>
-                <p class="hero-desc">
-                    Traditional ATS systems only find what candidates wrote. Our patent-pending AI enriches every resume with implicit skills before embedding — surfacing qualified people that keyword filters consistently miss.
-                </p>
-                <div class="hero-ctas">
-                    <a href="#contact" class="btn btn-primary">Request Early Access <span>→</span></a>
-                    <a href="#how-it-works" class="btn btn-ghost">See How It Works</a>
-                </div>
-                <div class="hero-proof">
-                    <span class="hero-proof-label">Built for</span>
-                    <div class="hero-proof-tags">
-                        <span class="hero-proof-tag">Enterprise HR</span>
-                        <span class="hero-proof-tag">ATS Vendors</span>
-                        <span class="hero-proof-tag">Staffing Firms</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hero-visual">
-                <div class="pipeline-card">
-                    <div class="pipeline-title">Enrichment Pipeline</div>
-                    <div class="pipeline-step">
-                        <div class="pipeline-icon">📄</div>
-                        <div class="pipeline-info">
-                            <div class="pipeline-label">Resume Intake</div>
-                            <div class="pipeline-sub">REST API or direct upload · PDF, DOCX, image</div>
-                        </div>
-                    </div>
-                    <div class="pipeline-connector"></div>
-                    <div class="pipeline-step">
-                        <div class="pipeline-icon">🤖</div>
-                        <div class="pipeline-info">
-                            <div class="pipeline-label">Multi-Agentic Enrichment</div>
-                            <div class="pipeline-sub">Parallel agents analyze hidden skill dimensions</div>
-                        </div>
-                    </div>
-                    <div class="pipeline-connector"></div>
-                    <div class="pipeline-step">
-                        <div class="pipeline-icon">🧠</div>
-                        <div class="pipeline-info">
-                            <div class="pipeline-label">Enriched Embedding</div>
-                            <div class="pipeline-sub">Augmented pre-vectorization (patent pending)</div>
-                        </div>
-                    </div>
-                    <div class="pipeline-connector"></div>
-                    <div class="pipeline-step">
-                        <div class="pipeline-icon">🎯</div>
-                        <div class="pipeline-info">
-                            <div class="pipeline-label">Semantic Matching</div>
-                            <div class="pipeline-sub">Job description ↔ enriched resume vectors</div>
-                        </div>
-                    </div>
-                    <div class="pipeline-connector"></div>
-                    <div class="pipeline-step">
-                        <div class="pipeline-icon">📊</div>
-                        <div class="pipeline-info">
-                            <div class="pipeline-label">Ranked Results</div>
-                            <div class="pipeline-sub">Top candidates returned with fit scores</div>
-                        </div>
-                    </div>
-                    <div class="pipeline-footer">
-                        <div class="pipeline-footer-label">Resume says: "Built Django REST API"</div>
-                        <div class="pipeline-footer-tags">
-                            <span class="pipeline-tag">Python</span>
-                            <span class="pipeline-tag">Backend Architecture</span>
-                            <span class="pipeline-tag">API Security</span>
-                            <span class="pipeline-tag">Scalability</span>
-                            <span class="pipeline-tag">Database Design</span>
-                        </div>
-                    </div>
-                </div>
+        <div class="hero-content">
+            <div class="hero-badge">&#9878;&#65039; Aram &mdash; &ldquo;Eternal Fairness&rdquo; in Tamil</div>
+            <h1 class="hero-headline">
+                When AI Reorders Society,<br>
+                We Make Sure <span class="highlight">Fairness Comes First</span>
+            </h1>
+            <p class="hero-desc">
+                Every major technological breakthrough reshuffles who gets opportunity and who gets left behind. Aram AI Labs builds AI systems that embed fairness, ethics, and equity into the infrastructure of that change &mdash; starting with hiring.
+            </p>
+            <div class="hero-ctas">
+                <a href="rankify.html" class="btn btn-primary">Explore Rankify <span>&rarr;</span></a>
+                <a href="#vision" class="btn btn-ghost">Our Vision</a>
             </div>
         </div>
     </div>
@@ -862,153 +628,195 @@
 <div class="trust-strip">
     <div class="container">
         <div class="trust-inner">
-            <div class="trust-item">🔒 Patent Pending</div>
+            <div class="trust-item">&#9878;&#65039; Fairness First</div>
             <div class="trust-dot"></div>
-            <div class="trust-item">✅ SOC 2 Aligned</div>
+            <div class="trust-item">&#128274; Patent Pending</div>
             <div class="trust-dot"></div>
-            <div class="trust-item">🤖 Multi-Agentic AI</div>
+            <div class="trust-item">&#129302; Multi-Agentic AI</div>
             <div class="trust-dot"></div>
-            <div class="trust-item">☁️ Built on Google Cloud</div>
+            <div class="trust-item">&#9729;&#65039; Built on Google Cloud</div>
             <div class="trust-dot"></div>
-            <div class="trust-item">⚡ Sub-Second Search</div>
-            <div class="trust-dot"></div>
-            <div class="trust-item">🇪🇺 GDPR Compliant</div>
+            <div class="trust-item">&#127466;&#127482; GDPR Compliant</div>
         </div>
     </div>
 </div>
 
-<!-- ===== PROBLEM ===== -->
-<section class="problem-section" id="problem">
+<!-- ===== WHY NOW ===== -->
+<section class="whynow-section" id="vision">
     <div class="container">
-        <div class="section-header">
-            <div class="section-label">The Problem</div>
-            <h2 class="section-title" style="color: var(--white);">Resume Screening Is Broken</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.48);">Keyword filters and manual review were designed for a world with far fewer applications. That world no longer exists.</p>
-        </div>
-        <div class="problem-grid">
-            <div class="problem-card fade-up d1">
-                <div class="problem-stat">75%</div>
-                <div class="problem-stat-note">Industry estimate · qualified applicants rejected</div>
-                <div class="problem-title">ATS Keyword Filters Eliminate Qualified Candidates</div>
-                <div class="problem-desc">A Python developer who wrote "server-side scripting" never passes the filter. Keyword matching rewards resume writers, not the most capable candidates.</div>
+        <div class="whynow-inner">
+            <div class="whynow-text">
+                <div class="section-label">Why Now</div>
+                <h2 class="section-title">AI Will Touch Every Aspect of How We Live and Work</h2>
+                <p>We are living through the most significant technological inflection point since the internet. AI will not just automate tasks &mdash; it will fundamentally reorder how decisions are made across hiring, lending, healthcare, education, and governance.</p>
+                <p>When that reordering happens, there is a real risk that existing biases are not just preserved &mdash; they are amplified and embedded at scale. The companies that build the AI infrastructure for this new world will determine whether it is fair or not.</p>
+                <p>That is why Aram AI Labs exists. <strong>&ldquo;Aram&rdquo;</strong> means <strong>eternal fairness and righteousness</strong> in Tamil. It is not just our name &mdash; it is our engineering mandate.</p>
+                <div class="whynow-callout">
+                    <p><strong>Our belief:</strong> Every aspect of life will be changed by AI. Every business, every institution, every individual. The question is not whether AI will reshape society &mdash; but whether fairness will be built into the foundation.</p>
+                </div>
             </div>
-            <div class="problem-card fade-up d2">
-                <div class="problem-stat">23 hrs</div>
-                <div class="problem-stat-note">Average recruiter time per open role</div>
-                <div class="problem-title">Manual Review Does Not Scale</div>
-                <div class="problem-desc">At volume — hundreds of applicants per position — screening quality degrades. Fatigue introduces inconsistency, and qualified candidates are deprioritized arbitrarily.</div>
-            </div>
-            <div class="problem-card fade-up d3">
-                <div class="problem-stat">60%</div>
-                <div class="problem-stat-note">Of job-relevant skills — never explicitly written</div>
-                <div class="problem-title">Implicit Skills Are Invisible to Existing Tools</div>
-                <div class="problem-desc">Most skills are implied by project context, outcomes, and role scope. Traditional ATS systems cannot infer what a resume means. They only match what it says.</div>
+            <div class="whynow-visual">
+                <div class="whynow-stat-card fade-up d1">
+                    <div class="whynow-stat-num">85%</div>
+                    <div class="whynow-stat-label">of enterprise decisions will involve AI by 2028</div>
+                </div>
+                <div class="whynow-stat-card fade-up d2">
+                    <div class="whynow-stat-num">$4.4T</div>
+                    <div class="whynow-stat-label">annual value AI adds to the global economy</div>
+                </div>
+                <div class="whynow-stat-card fade-up d3">
+                    <div class="whynow-stat-num">75%</div>
+                    <div class="whynow-stat-label">of AI systems tested show measurable bias</div>
+                </div>
+                <div class="whynow-stat-card fade-up d4">
+                    <div class="whynow-stat-num">1 in 3</div>
+                    <div class="whynow-stat-label">workers will need to transition roles due to AI</div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ===== SOLUTION ===== -->
-<section class="solution-section" id="solution">
+<!-- ===== VALUES ===== -->
+<section class="values-section" id="values">
     <div class="container">
-        <div class="solution-inner">
-            <div class="solution-text">
-                <div class="section-label">Our Solution</div>
-                <h2 class="section-title">Enrich Before You Embed</h2>
-                <p>We do not just parse resumes — we enrich them. Our patent-pending multi-agentic workflow dispatches specialized AI agents in parallel, each analyzing a different dimension of a candidate's profile: technical depth, leadership signals, domain expertise, and cross-functional capability.</p>
-                <p>The findings from all agents are aggregated into a single enriched resume profile. That enriched profile — not the raw resume text — is embedded into semantic vector space and matched against job descriptions.</p>
-                <p>Candidates become discoverable based on what they genuinely know, not just what they happened to write.</p>
-                <div class="solution-callout">
-                    <p><strong>The moat:</strong> Any semantic search system can embed raw text. Only Aram AI Labs enriches it first — and that changes everything about who gets found.</p>
+        <div class="section-header">
+            <div class="section-label">Our Values</div>
+            <h2 class="section-title" style="color: var(--white);">The Principles That Guide Every Line of Code</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.48);">These are not aspirational statements. They are engineering constraints built into every system we ship.</p>
+        </div>
+        <div class="values-grid">
+            <div class="value-card fade-up d1">
+                <div class="value-icon">&#9878;&#65039;</div>
+                <div class="value-title">Fairness as Infrastructure</div>
+                <div class="value-desc">Fairness is not a feature we add &mdash; it is the architecture we build on. Every AI pipeline we design starts with the question: &ldquo;Does this produce equitable outcomes?&rdquo; If the answer is uncertain, we do not ship it.</div>
+            </div>
+            <div class="value-card fade-up d2">
+                <div class="value-icon">&#129517;</div>
+                <div class="value-title">Ethics Over Convenience</div>
+                <div class="value-desc">When speed and ethics conflict, ethics wins. We build slower, test more thoroughly, and reject shortcuts that compromise the integrity of decisions our AI influences. We believe this is the only way to build AI that lasts.</div>
+            </div>
+            <div class="value-card fade-up d3">
+                <div class="value-icon">&#128300;</div>
+                <div class="value-title">Bias Is a Bug, Not a Feature</div>
+                <div class="value-desc">Bias in AI is not an abstract concern &mdash; it is a concrete engineering failure. We treat it the way safety-critical industries treat defects: with systematic detection, measurement, and elimination at every stage of the pipeline.</div>
+            </div>
+            <div class="value-card fade-up d1">
+                <div class="value-icon">&#127758;</div>
+                <div class="value-title">No One Gets Marginalized</div>
+                <div class="value-desc">The power of AI should not concentrate opportunity in the hands of those who already have it. Our systems are designed to surface talent, potential, and capability that traditional systems consistently overlook.</div>
+            </div>
+            <div class="value-card fade-up d2">
+                <div class="value-icon">&#128269;</div>
+                <div class="value-title">Radical Transparency</div>
+                <div class="value-desc">If our AI makes a decision, we can explain why. No black boxes. We provide audit trails, explainability layers, and bias reports because trust requires evidence, not promises.</div>
+            </div>
+            <div class="value-card fade-up d3">
+                <div class="value-icon">&#128737;&#65039;</div>
+                <div class="value-title">Privacy Is Non-Negotiable</div>
+                <div class="value-desc">The data our systems process belongs to people &mdash; not to us. Enterprise-grade encryption, strict data residency controls, and GDPR compliance are built into the foundation, not bolted on after the fact.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== AI BELIEF ===== -->
+<section class="belief-section">
+    <div class="container">
+        <div class="belief-inner">
+            <div class="section-label">Our Belief</div>
+            <h2 class="section-title">AI Will Transform Everything &mdash; We Are Building for That World</h2>
+            <p>We do not believe AI is a tool for one department or one function. It will reshape every aspect of how value is created &mdash; from how companies hire, to how people access healthcare, education, and financial services. The companies that embed fairness into AI infrastructure today will define whether the next era is equitable or not.</p>
+            <p>Aram AI Labs is building that infrastructure &mdash; one domain at a time, starting where the impact is most immediate: <strong>hiring and employment</strong>.</p>
+            <div class="belief-pillars">
+                <div class="belief-pillar fade-up d1">
+                    <div class="belief-pillar-icon">&#128188;</div>
+                    <div class="belief-pillar-title">Hiring &amp; Employment</div>
+                    <div class="belief-pillar-desc">Active &mdash; Rankify</div>
+                </div>
+                <div class="belief-pillar fade-up d2">
+                    <div class="belief-pillar-icon">&#127973;</div>
+                    <div class="belief-pillar-title">Healthcare Access</div>
+                    <div class="belief-pillar-desc">Future Horizon</div>
+                </div>
+                <div class="belief-pillar fade-up d3">
+                    <div class="belief-pillar-icon">&#127891;</div>
+                    <div class="belief-pillar-title">Education Equity</div>
+                    <div class="belief-pillar-desc">Future Horizon</div>
+                </div>
+                <div class="belief-pillar fade-up d4">
+                    <div class="belief-pillar-icon">&#127974;</div>
+                    <div class="belief-pillar-title">Financial Fairness</div>
+                    <div class="belief-pillar-desc">Future Horizon</div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
 
-            <div class="compare-stack">
-                <div class="compare-box before">
-                    <div class="compare-label">❌ Traditional ATS</div>
-                    <div class="compare-quote">"Built Django REST API for real-time analytics platform"</div>
-                    <div class="compare-tags">
-                        <span class="compare-tag">Django</span>
-                        <span class="compare-tag">REST</span>
-                        <span class="compare-tag">API</span>
-                        <span class="compare-tag">analytics</span>
+<!-- ===== PRODUCTS ===== -->
+<section class="products-section" id="products">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">Our Products</div>
+            <h2 class="section-title">AI-Powered Solutions for a Fairer World</h2>
+            <p class="section-subtitle">Each product applies our fairness-first AI to a specific domain where bias has the greatest real-world impact.</p>
+        </div>
+        <div class="product-card">
+            <div>
+                <div class="product-badge">&#128640; Live &mdash; First Product</div>
+                <div class="product-name">Rankify</div>
+                <div class="product-tagline">Fairness in Hiring, Delivered by AI</div>
+                <p class="product-desc">Patent-pending multi-agentic AI that enriches every resume with implicit skills before embedding &mdash; so candidates are ranked by what they genuinely know, not what they happened to write. The first product from Aram AI Labs, built to eliminate bias at the source of the talent pipeline.</p>
+                <ul class="product-features">
+                    <li>Multi-agentic enrichment discovers hidden skills</li>
+                    <li>Patent-pending augmented pre-vectorization</li>
+                    <li>ATS API integration + Micro-SaaS platform</li>
+                    <li>Sub-second semantic candidate ranking</li>
+                    <li>Enterprise security: SOC 2, GDPR, encryption</li>
+                </ul>
+                <a href="rankify.html" class="btn btn-primary">Explore Rankify &rarr;</a>
+            </div>
+            <div class="product-visual">
+                <div class="product-pipeline-title">Rankify Pipeline</div>
+                <div class="product-pipeline-step">
+                    <div class="product-pipeline-icon">&#128196;</div>
+                    <div>
+                        <div class="product-pipeline-label">Resume Intake</div>
+                        <div class="product-pipeline-sub">REST API or direct upload</div>
                     </div>
                 </div>
-                <div class="compare-arrow">↓ Multi-Agentic Enrichment</div>
-                <div class="compare-box after">
-                    <div class="compare-label">✅ Aram AI — Enriched Profile</div>
-                    <div class="compare-quote">"Built Django REST API for real-time analytics platform"</div>
-                    <div class="compare-tags">
-                        <span class="compare-tag">Python</span>
-                        <span class="compare-tag">Backend Architecture</span>
-                        <span class="compare-tag">Database Design</span>
-                        <span class="compare-tag">API Security</span>
-                        <span class="compare-tag">REST Principles</span>
-                        <span class="compare-tag">Data Pipelines</span>
-                        <span class="compare-tag">Scalability</span>
-                        <span class="compare-tag">System Design</span>
+                <div class="product-pipeline-connector"></div>
+                <div class="product-pipeline-step">
+                    <div class="product-pipeline-icon">&#129302;</div>
+                    <div>
+                        <div class="product-pipeline-label">Multi-Agentic Enrichment</div>
+                        <div class="product-pipeline-sub">Parallel agents analyze hidden skills</div>
+                    </div>
+                </div>
+                <div class="product-pipeline-connector"></div>
+                <div class="product-pipeline-step">
+                    <div class="product-pipeline-icon">&#129504;</div>
+                    <div>
+                        <div class="product-pipeline-label">Enriched Embedding</div>
+                        <div class="product-pipeline-sub">Patent-pending pre-vectorization</div>
+                    </div>
+                </div>
+                <div class="product-pipeline-connector"></div>
+                <div class="product-pipeline-step">
+                    <div class="product-pipeline-icon">&#9889;</div>
+                    <div>
+                        <div class="product-pipeline-label">Fair Ranking</div>
+                        <div class="product-pipeline-sub">Candidates ranked by true fit</div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
 
-<!-- ===== HOW IT WORKS ===== -->
-<section class="hiw-section" id="how-it-works">
-    <div class="container">
-        <div class="section-header">
-            <div class="section-label">How It Works</div>
-            <h2 class="section-title">From Resume to Ranked Candidates in Four Steps</h2>
-            <p class="section-subtitle">The entire pipeline — intake, enrichment, embedding, and matching — runs in seconds.</p>
-        </div>
-        <div class="steps-row">
-            <div class="step fade-up d1">
-                <div class="step-num">1</div>
-                <div class="step-emoji">📥</div>
-                <div class="step-title">Resume Intake</div>
-                <div class="step-desc">Resumes arrive via REST API (ATS integration) or direct upload through our platform. We accept PDF, DOCX, and image formats with high-accuracy parsing.</div>
-            </div>
-            <div class="step fade-up d2">
-                <div class="step-num">2</div>
-                <div class="step-emoji">🤖</div>
-                <div class="step-title">Multi-Agentic Enrichment</div>
-                <div class="step-desc">Parallel AI agents each analyze a different skill dimension — technical depth, leadership, domain expertise, and soft skills. Results are aggregated into a single enriched profile.</div>
-            </div>
-            <div class="step fade-up d3">
-                <div class="step-num">3</div>
-                <div class="step-emoji">🧠</div>
-                <div class="step-title">Enriched Embedding</div>
-                <div class="step-desc">The enriched resume — containing both written and agent-discovered skills — is embedded into semantic vector space using our patent-pending augmented pre-vectorization architecture.</div>
-            </div>
-            <div class="step fade-up d4">
-                <div class="step-num">4</div>
-                <div class="step-emoji">⚡</div>
-                <div class="step-title">Semantic Ranking</div>
-                <div class="step-desc">The job description is matched against all enriched embeddings. AI-powered reranking surfaces genuinely qualified candidates — ranked by true fit — in under a second.</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== DEMO ===== -->
-<section class="demo-section" id="demo">
-    <div class="container">
-        <div class="section-header">
-            <div class="section-label">Product Demo</div>
-            <h2 class="section-title">See It in Action</h2>
-            <p class="section-subtitle">Watch our MVP: resume upload, multi-agentic enrichment, and AI-powered candidate ranking.</p>
-        </div>
-        <div class="demo-wrap">
-            <div class="demo-embed">
-                <iframe
-                    src="https://www.youtube.com/embed/EAQE-qSzoV4?si=LlEroqsE-9aTBi9k"
-                    title="Aram AI Labs Product Demo"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <p class="demo-caption">💡 MVP demonstration — resume upload, multi-agentic enrichment, and semantic candidate ranking</p>
+        <div class="product-coming">
+            <div class="product-coming-label">Coming Soon</div>
+            <div class="product-coming-title">More domains. Same fairness mandate.</div>
+            <div class="product-coming-desc">As we prove our approach in hiring, we will expand into healthcare access, education equity, and financial fairness &mdash; wherever AI decisions affect human opportunity.</div>
         </div>
     </div>
 </section>
@@ -1019,32 +827,32 @@
         <div class="section-header">
             <div class="section-label">Infrastructure &amp; AI Stack</div>
             <h2 class="section-title">Built on Google Cloud Platform</h2>
-            <p class="section-subtitle">Our AI pipeline runs on GCP — chosen for its production-grade AI/ML services, global infrastructure, and the tight integration between foundation models, serverless compute, and vector search that our architecture requires.</p>
+            <p class="section-subtitle">Our AI pipelines run on GCP &mdash; chosen for its production-grade AI/ML services, global infrastructure, and the tight integration between foundation models, serverless compute, and vector search that our architecture requires.</p>
         </div>
         <div class="gcp-cards">
             <div class="gcp-card fade-up d1">
-                <div class="gcp-icon">🧠</div>
+                <div class="gcp-icon">&#129504;</div>
                 <div>
                     <h4>Vertex AI</h4>
-                    <p>Powers our multi-agentic enrichment layer. Foundation models analyze each skill dimension in parallel — technical depth, leadership signals, domain expertise — delivering the enriched profiles that are our core differentiator.</p>
+                    <p>Powers our multi-agentic enrichment layer. Foundation models analyze each skill dimension in parallel &mdash; technical depth, leadership signals, domain expertise &mdash; delivering the enriched profiles that are our core differentiator.</p>
                 </div>
             </div>
             <div class="gcp-card fade-up d2">
-                <div class="gcp-icon">⚙️</div>
+                <div class="gcp-icon">&#9881;&#65039;</div>
                 <div>
                     <h4>Cloud Functions</h4>
-                    <p>Serverless, event-driven pipeline that auto-scales from a single resume to 1,000+ concurrent enrichment tasks. Zero infrastructure management — the system handles demand spikes automatically.</p>
+                    <p>Serverless, event-driven pipeline that auto-scales from a single resume to 1,000+ concurrent enrichment tasks. Zero infrastructure management &mdash; the system handles demand spikes automatically.</p>
                 </div>
             </div>
             <div class="gcp-card fade-up d3">
-                <div class="gcp-icon">🗄️</div>
+                <div class="gcp-icon">&#128451;&#65039;</div>
                 <div>
                     <h4>Firestore</h4>
                     <p>Real-time NoSQL database for storing enriched candidate profiles. Provides instant access to candidate metadata during matching, with strong consistency and low-latency reads at scale.</p>
                 </div>
             </div>
             <div class="gcp-card fade-up d4">
-                <div class="gcp-icon">🔍</div>
+                <div class="gcp-icon">&#128269;</div>
                 <div>
                     <h4>Vector Search</h4>
                     <p>ANN-indexed semantic search across millions of enriched embeddings with sub-second query latency. Combined with AI-powered reranking, this delivers precision matching that keyword search cannot approach.</p>
@@ -1053,47 +861,14 @@
         </div>
         <div class="gcp-banner">
             <div class="gcp-banner-text">
-                <h3>🏗️ Purpose-Built GCP Architecture</h3>
-                <p>Every component was selected because it is the right tool for its role — from Vertex AI foundation models for enrichment, to Cloud Functions' auto-scaling compute, to Vector Search's ANN indexing for sub-second retrieval.</p>
+                <h3>&#127959;&#65039; Purpose-Built GCP Architecture</h3>
+                <p>Every component was selected because it is the right tool for its role &mdash; from Vertex AI foundation models for enrichment, to Cloud Functions&rsquo; auto-scaling compute, to Vector Search&rsquo;s ANN indexing for sub-second retrieval.</p>
             </div>
             <div class="gcp-banner-badges">
-                <span class="gcp-banner-badge">☁️ Google Cloud</span>
-                <span class="gcp-banner-badge">🚀 Auto-Scaling</span>
-                <span class="gcp-banner-badge">⚡ Sub-Second</span>
-                <span class="gcp-banner-badge">🌍 Global</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== SECURITY ===== -->
-<section class="security-section" id="security">
-    <div class="container">
-        <div class="section-header">
-            <div class="section-label">Security &amp; Compliance</div>
-            <h2 class="section-title">Enterprise Data Protection</h2>
-            <p class="section-subtitle">Resume data is sensitive. We treat it that way — with enterprise-grade security controls and compliance commitments built into the platform from day one.</p>
-        </div>
-        <div class="security-grid">
-            <div class="security-card fade-up d1">
-                <div class="security-icon">🛡️</div>
-                <div class="security-title">SOC 2 Aligned</div>
-                <div class="security-desc">Infrastructure and operational controls aligned to SOC 2 Type II requirements, covering security, availability, and confidentiality of candidate data.</div>
-            </div>
-            <div class="security-card fade-up d2">
-                <div class="security-icon">🔒</div>
-                <div class="security-title">End-to-End Encryption</div>
-                <div class="security-desc">All resume data is encrypted in transit (TLS 1.3) and at rest (AES-256). No plaintext candidate data is ever stored without protection.</div>
-            </div>
-            <div class="security-card fade-up d3">
-                <div class="security-icon">🇪🇺</div>
-                <div class="security-title">GDPR Compliant</div>
-                <div class="security-desc">Data subject rights, consent management, data residency controls, and deletion workflows are built in — suitable for EU and UK enterprise deployments.</div>
-            </div>
-            <div class="security-card fade-up d4">
-                <div class="security-icon">📋</div>
-                <div class="security-title">Audit Logging</div>
-                <div class="security-desc">Comprehensive, tamper-evident audit logs for every data access and enrichment operation — supporting compliance reviews, SLAs, and internal governance.</div>
+                <span class="gcp-banner-badge">&#9729;&#65039; Google Cloud</span>
+                <span class="gcp-banner-badge">&#128640; Auto-Scaling</span>
+                <span class="gcp-banner-badge">&#9889; Sub-Second</span>
+                <span class="gcp-banner-badge">&#127758; Global</span>
             </div>
         </div>
     </div>
@@ -1105,9 +880,9 @@
         <div class="team-inner">
             <div class="team-text">
                 <div class="section-label">About Aram AI Labs</div>
-                <h2 class="section-title">Built by Engineers Who Have Solved Hard Problems Before</h2>
-                <p>Aram AI Labs is an early-stage AI company based in Pittsburgh, PA, building patent-pending technology for the talent acquisition market. We believe the resume screening problem is fundamentally an AI problem — not a search problem — and we are building accordingly.</p>
-                <p>Our founding team brings deep expertise in safety-critical distributed systems, production-grade AI, and enterprise architecture. The same rigor that goes into life-critical software informs how we think about reliability, correctness, and security in our enrichment pipeline.</p>
+                <h2 class="section-title">Built by Engineers Who Believe Fairness Is an Engineering Problem</h2>
+                <p>Aram AI Labs is an early-stage AI company based in Pittsburgh, PA. We believe the biggest risk of the AI era is not that AI will fail &mdash; it is that AI will succeed while being unfair. The same systems that promise efficiency also risk encoding the biases of the past at unprecedented scale.</p>
+                <p>Our founding team brings deep expertise in safety-critical distributed systems, production-grade AI, and enterprise architecture. The same rigor that goes into life-critical software informs how we think about fairness, reliability, and correctness in every system we build.</p>
             </div>
 
             <div class="team-card">
@@ -1120,8 +895,8 @@
                     <span class="team-chip">Patent Co-Inventor</span>
                     <span class="team-chip">16+ Years</span>
                 </div>
-                <div class="team-bio">Principal Architect with 16+ years in safety-critical distributed systems. Co-inventor of the patent-pending Augmented Pre-Vectorization Architecture and the multi-agentic enrichment engine at the core of our product.</div>
-                <a href="https://www.linkedin.com/in/maruthut/" target="_blank" class="team-link">Connect on LinkedIn →</a>
+                <div class="team-bio">Principal Architect with 16+ years in safety-critical distributed systems. Co-inventor of the patent-pending Augmented Pre-Vectorization Architecture and the multi-agentic enrichment engine at the core of Rankify.</div>
+                <a href="https://www.linkedin.com/in/maruthut/" target="_blank" class="team-link">Connect on LinkedIn &rarr;</a>
             </div>
         </div>
     </div>
@@ -1131,74 +906,12 @@
 <section class="cta-section" id="contact">
     <div class="container">
         <div class="cta-inner">
-            <div class="cta-text">
-                <div class="section-label" style="color: var(--orange-400);">Early Access</div>
-                <h2 class="section-title">Limited Beta Spots Available</h2>
-                <p>We are onboarding a select group of enterprise HR teams, ATS vendors, and staffing firms for our beta program. Participants receive dedicated onboarding, custom integration support, and direct access to the product team.</p>
-                <ul class="cta-bullets">
-                    <li>Free pilot for qualified organizations</li>
-                    <li>ATS API integration or direct SaaS platform access</li>
-                    <li>Dedicated onboarding and integration support</li>
-                    <li>Direct line to the founding team</li>
-                    <li>Measurable results within the first week</li>
-                </ul>
-            </div>
-
-            <div class="form-card">
-                <h3>Request Early Access</h3>
-                <p>Tell us about your hiring volume and we will respond within 24 hours.</p>
-                <div class="form-error" id="formError"></div>
-                <form id="earlyAccessForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-                    <input type="hidden" name="access_key" value="5787df37-1984-4cca-99f9-1fb4c6c0a72a">
-                    <input type="hidden" name="subject" value="New Early Access Request — Aram AI Labs">
-                    <input type="hidden" name="redirect" value="false">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>First Name</label>
-                            <input type="text" name="first_name" placeholder="Jane" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Last Name</label>
-                            <input type="text" name="last_name" placeholder="Smith" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Work Email</label>
-                        <input type="email" name="email" placeholder="jane@company.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Company</label>
-                        <input type="text" name="company" placeholder="Acme Corp" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Your Role</label>
-                        <select name="role">
-                            <option value="">Select your role</option>
-                            <option>CHRO / VP of HR</option>
-                            <option>Head of Talent Acquisition</option>
-                            <option>Recruiter / Sourcer</option>
-                            <option>ATS Product Manager</option>
-                            <option>Engineering / Technical</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Monthly Resume Volume</label>
-                        <select name="volume">
-                            <option value="">Select range</option>
-                            <option>Under 500</option>
-                            <option>500 – 5,000</option>
-                            <option>5,000 – 50,000</option>
-                            <option>50,000+</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Anything else? (optional)</label>
-                        <textarea name="message" placeholder="Current ATS, specific challenges, timeline..."></textarea>
-                    </div>
-                    <button type="submit" class="form-submit">Request Access →</button>
-                    <p class="form-note">No commitment required · We respond within 24 hours</p>
-                </form>
+            <div class="section-label" style="color: var(--orange-400);">Get in Touch</div>
+            <h2 class="section-title">Build the Future of Fair AI With Us</h2>
+            <p>Whether you are an enterprise looking for fair hiring technology, an investor who believes in ethical AI, or a GCP partner exploring what fairness-first AI looks like &mdash; we would love to hear from you.</p>
+            <div class="cta-btns">
+                <a href="rankify.html#contact" class="btn btn-primary">Request Rankify Access &rarr;</a>
+                <a href="mailto:contact@aramailabs.com" class="btn btn-ghost">Email Us</a>
             </div>
         </div>
     </div>
@@ -1216,28 +929,29 @@
                         <span class="footer-logo-sub">AI LABS</span>
                     </div>
                 </div>
-                <p>Patent-pending multi-agentic AI that enriches resumes with implicit skills before embedding — enterprise-grade accuracy for talent acquisition teams.</p>
+                <p>Building AI that ensures fairness, ethics, and equity at every societal inflection point. Starting with hiring.</p>
                 <div class="footer-chips">
-                    <span class="footer-chip">🔒 Patent Pending</span>
-                    <span class="footer-chip">🛡️ SOC 2 Aligned</span>
-                    <span class="footer-chip">☁️ Google Cloud</span>
+                    <span class="footer-chip">&#9878;&#65039; Fairness First</span>
+                    <span class="footer-chip">&#128274; Patent Pending</span>
+                    <span class="footer-chip">&#9729;&#65039; Google Cloud</span>
                 </div>
-            </div>
-            <div class="footer-col">
-                <h4>Product</h4>
-                <ul>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#technology">Technology</a></li>
-                    <li><a href="#demo">Product Demo</a></li>
-                    <li><a href="#contact">Early Access</a></li>
-                </ul>
             </div>
             <div class="footer-col">
                 <h4>Company</h4>
                 <ul>
+                    <li><a href="#vision">Our Vision</a></li>
+                    <li><a href="#values">Values</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#security">Security</a></li>
-                    <li><a href="mailto:contact@aramailabs.com">Contact</a></li>
+                    <li><a href="#technology">Technology</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="rankify.html">Rankify</a></li>
+                    <li><a href="rankify.html#how-it-works">How It Works</a></li>
+                    <li><a href="rankify.html#demo">Product Demo</a></li>
+                    <li><a href="rankify.html#contact">Early Access</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -1245,28 +959,19 @@
                 <ul>
                     <li><a href="privacy.html">Privacy Policy</a></li>
                     <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="mailto:contact@aramailabs.com">Contact</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="footer-copy">© 2025 Aram AI Labs LLC · Pittsburgh, PA</div>
+            <div class="footer-copy">&copy; 2025 Aram AI Labs LLC &middot; Pittsburgh, PA</div>
             <div class="footer-chips">
-                <span class="footer-chip">🔒 Patent Pending</span>
-                <span class="footer-chip">☁️ Built on Google Cloud</span>
+                <span class="footer-chip">&#9878;&#65039; Fairness First</span>
+                <span class="footer-chip">&#9729;&#65039; Built on Google Cloud</span>
             </div>
         </div>
     </div>
 </footer>
-
-<!-- ===== SUCCESS MODAL ===== -->
-<div class="modal-overlay" id="successModal">
-    <div class="modal-card">
-        <div class="modal-icon">🎉</div>
-        <h3>Request Received!</h3>
-        <p>Thank you — we will review your details and be in touch within 24 hours.</p>
-        <button class="modal-btn" id="modalClose">Done</button>
-    </div>
-</div>
 
 <script>
     // Nav toggle
@@ -1286,58 +991,7 @@
         entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.fade-up, .problem-card, .step, .gcp-card, .security-card').forEach(el => observer.observe(el));
-
-    // Form submission
-    const form        = document.getElementById('earlyAccessForm');
-    const formError   = document.getElementById('formError');
-    const modal       = document.getElementById('successModal');
-    const modalClose  = document.getElementById('modalClose');
-
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        formError.style.display = 'none';
-        const btn = form.querySelector('.form-submit');
-        btn.textContent = 'Submitting…';
-        btn.disabled = true;
-        try {
-            const res  = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
-            const data = await res.json();
-            if (data.success) { modal.classList.add('open'); form.reset(); }
-            else throw new Error();
-        } catch {
-            formError.style.display = 'block';
-            formError.textContent = 'Something went wrong. Please email us at contact@aramailabs.com.';
-        } finally {
-            btn.textContent = 'Request Access →';
-            btn.disabled = false;
-        }
-    });
-
-    modalClose.addEventListener('click', () => modal.classList.remove('open'));
-    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
-
-    // Counter animation for problem stats
-    function animateCounter(el) {
-        const raw = el.textContent.trim();
-        const num = parseFloat(raw);
-        const suffix = raw.replace(/[\d.]+/, '');
-        if (isNaN(num)) return;
-        let startTs = null;
-        const duration = 1800;
-        const tick = (ts) => {
-            if (!startTs) startTs = ts;
-            const progress = Math.min((ts - startTs) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            el.textContent = Math.round(eased * num) + suffix;
-            if (progress < 1) requestAnimationFrame(tick);
-        };
-        requestAnimationFrame(tick);
-    }
-    const counterObs = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); counterObs.unobserve(e.target); } });
-    }, { threshold: 0.6 });
-    document.querySelectorAll('.problem-stat').forEach(el => counterObs.observe(el));
+    document.querySelectorAll('.fade-up, .value-card, .gcp-card, .belief-pillar, .whynow-stat-card').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
