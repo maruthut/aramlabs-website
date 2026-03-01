@@ -143,16 +143,30 @@
             text-decoration: none;
         }
         .nav-logo-icon {
-            width: 34px; height: 34px;
-            border-radius: 8px;
-            background: linear-gradient(145deg, #F97316 0%, #C2590A 100%);
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.18), 0 2px 8px rgba(249,115,22,0.35);
+            width: 36px; height: 36px;
+            border-radius: 9px;
+            background:
+                linear-gradient(160deg,
+                    #F4A35A 0%,
+                    #E8751A 35%,
+                    #C25A08 65%,
+                    #8B3A00 100%);
+            box-shadow:
+                inset 0 1.5px 0 rgba(255,220,150,0.55),
+                inset 0 -2px 0 rgba(0,0,0,0.35),
+                inset 2px 0 0 rgba(255,180,80,0.18),
+                inset -2px 0 0 rgba(0,0,0,0.25),
+                0 4px 10px rgba(0,0,0,0.55),
+                0 1px 3px rgba(0,0,0,0.4),
+                0 0 0 1px rgba(0,0,0,0.3);
             display: flex; align-items: center; justify-content: center;
             font-size: 1.05rem; font-weight: 900;
-            color: var(--white);
+            color: rgba(255,255,255,0.95);
             font-family: 'Inter', sans-serif;
             letter-spacing: -0.04em;
             flex-shrink: 0;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+            position: relative;
         }
         .nav-logo-text { display: flex; flex-direction: column; gap: 0; align-items: center; }
         .nav-logo-name { font-size: 1.15rem; font-weight: 900; color: var(--orange-500); letter-spacing: -0.03em; line-height: 1; }
@@ -628,11 +642,24 @@
         .footer-logo-icon {
             width: 30px; height: 30px;
             border-radius: 7px;
-            background: linear-gradient(145deg, #F97316 0%, #C2590A 100%);
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.18);
+            background:
+                linear-gradient(160deg,
+                    #F4A35A 0%,
+                    #E8751A 35%,
+                    #C25A08 65%,
+                    #8B3A00 100%);
+            box-shadow:
+                inset 0 1.5px 0 rgba(255,220,150,0.55),
+                inset 0 -2px 0 rgba(0,0,0,0.35),
+                inset 2px 0 0 rgba(255,180,80,0.18),
+                inset -2px 0 0 rgba(0,0,0,0.25),
+                0 4px 10px rgba(0,0,0,0.55),
+                0 1px 3px rgba(0,0,0,0.4),
+                0 0 0 1px rgba(0,0,0,0.3);
             display: flex; align-items: center; justify-content: center;
-            font-size: 0.95rem; font-weight: 900; color: var(--white);
+            font-size: 0.95rem; font-weight: 900; color: rgba(255,255,255,0.95);
             font-family: 'Inter', sans-serif; letter-spacing: -0.04em; flex-shrink: 0;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.4);
         }
         .footer-logo-wordmark { font-size: 1.1rem; font-weight: 900; color: var(--orange-500); letter-spacing: -0.03em; }
         .footer-brand p { font-size: 0.83rem; color: rgba(255,255,255,0.38); line-height: 1.7; margin-bottom: 1.1rem; }
