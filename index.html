@@ -657,7 +657,9 @@
             font-family: 'Inter', sans-serif; letter-spacing: -0.04em; flex-shrink: 0;
             text-shadow: 0 1px 3px rgba(0,0,0,0.5);
         }
-        .footer-logo-wordmark { font-size: 1.1rem; font-weight: 900; color: var(--orange-500); letter-spacing: -0.03em; }
+        .footer-logo-text { display: flex; flex-direction: column; gap: 0; align-items: center; }
+        .footer-logo-name { font-size: 1.1rem; font-weight: 900; color: var(--orange-500); letter-spacing: -0.03em; line-height: 1; }
+        .footer-logo-sub  { font-size: 0.55rem; font-weight: 700; color: rgba(255,255,255,0.35); letter-spacing: 0.18em; text-transform: uppercase; line-height: 1; margin-top: 2px; }
         .footer-brand p { font-size: 0.83rem; color: rgba(255,255,255,0.38); line-height: 1.7; margin-bottom: 1.1rem; }
         .footer-chips { display: flex; gap: 0.5rem; flex-wrap: wrap; }
         .footer-chip { font-size: 0.7rem; font-weight: 600; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.38); padding: 0.22rem 0.6rem; border-radius: var(--radius-sm); }
@@ -1209,7 +1211,10 @@
             <div class="footer-brand">
                 <div class="footer-brand-name">
                     <div class="footer-logo-icon">A</div>
-                    <span class="footer-logo-wordmark">ARAM AI LABS</span>
+                    <div class="footer-logo-text">
+                        <span class="footer-logo-name">ARAM</span>
+                        <span class="footer-logo-sub">AI LABS</span>
+                    </div>
                 </div>
                 <p>Patent-pending multi-agentic AI that enriches resumes with implicit skills before embedding — enterprise-grade accuracy for talent acquisition teams.</p>
                 <div class="footer-chips">
