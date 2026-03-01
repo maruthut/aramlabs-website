@@ -119,6 +119,159 @@
         }
         .btn-outline:hover { background: var(--orange-500); color: var(--white); }
 
+        /* ── ANNOUNCEMENT BAR ───────────────────────────────── */
+        .announce-bar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 110;
+            background: linear-gradient(90deg, #1a0a02 0%, #2A1104 25%, #6B3209 50%, #2A1104 75%, #1a0a02 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            padding: 0 3rem;
+            text-decoration: none;
+            overflow: hidden;
+            transition: transform 0.35s cubic-bezier(0.16,1,0.3,1);
+        }
+        .announce-bar.dismissed { transform: translateY(-100%); }
+
+        /* Sweeping shimmer */
+        .announce-bar::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; right: 0; bottom: 0;
+            width: 300%;
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                transparent 30%,
+                rgba(255,180,80,0.15) 45%,
+                rgba(255,200,100,0.25) 50%,
+                rgba(255,180,80,0.15) 55%,
+                transparent 70%,
+                transparent 100%
+            );
+            animation: announceShimmer 3s ease-in-out infinite;
+        }
+        @keyframes announceShimmer {
+            0%   { transform: translateX(-33%); }
+            100% { transform: translateX(33%); }
+        }
+
+        /* Bottom glow line */
+        .announce-bar::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,160,60,0.5), rgba(249,115,22,0.8), rgba(255,160,60,0.5), transparent);
+        }
+
+        .announce-bar-inner {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--white);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Pulsing LIVE badge */
+        .announce-bar-live {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: rgba(34,197,94,0.15);
+            border: 1px solid rgba(34,197,94,0.35);
+            border-radius: 100px;
+            padding: 0.15rem 0.65rem;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #4ade80;
+        }
+        .announce-bar-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: #4ade80;
+            animation: livePulse 2s ease-in-out infinite;
+        }
+        @keyframes livePulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(74,222,128,0.5); }
+            50%      { box-shadow: 0 0 0 5px rgba(74,222,128,0); }
+        }
+
+        .announce-bar-text {
+            color: rgba(255,255,255,0.9);
+        }
+        .announce-bar-text strong {
+            color: var(--orange-400);
+        }
+
+        .announce-bar-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: var(--orange-500);
+            color: var(--white);
+            padding: 0.25rem 0.85rem;
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .announce-bar:hover .announce-bar-cta {
+            background: var(--orange-600);
+            transform: translateX(2px);
+        }
+
+        .announce-bar-close {
+            position: absolute;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.35);
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 4px 8px;
+            line-height: 1;
+            transition: color 0.2s;
+            z-index: 3;
+        }
+        .announce-bar-close:hover { color: var(--white); }
+
+        /* Sparkle particles */
+        .announce-sparkle {
+            position: absolute;
+            width: 3px; height: 3px;
+            border-radius: 50%;
+            background: rgba(255,200,100,0.6);
+            pointer-events: none;
+            animation: sparkleFloat linear infinite;
+        }
+        @keyframes sparkleFloat {
+            0%   { opacity: 0; transform: translateY(0) scale(0); }
+            15%  { opacity: 1; transform: translateY(-5px) scale(1); }
+            85%  { opacity: 1; transform: translateY(-30px) scale(0.8); }
+            100% { opacity: 0; transform: translateY(-40px) scale(0); }
+        }
+
+        body.has-announce .nav { top: 48px; }
+        body.has-announce .hero { padding-top: calc(9rem + 48px); }
+
+        @media (max-width: 768px) {
+            body.has-announce .hero { padding-top: calc(6rem + 48px); }
+            .announce-bar { height: 44px; padding: 0 2rem; }
+            .announce-bar-inner { font-size: 0.78rem; gap: 0.5rem; }
+            .announce-bar-text { display: none; }
+            .announce-bar-close { right: 0.5rem; }
+            body.has-announce .nav { top: 44px; }
+        }
+
         /* ── NAV ────────────────────────────────────────────── */
         .nav {
             position: fixed;
@@ -578,7 +731,17 @@
         }
     </style>
 </head>
-<body>
+<body class="has-announce">
+
+<!-- ===== ANNOUNCEMENT BAR ===== -->
+<a href="https://rankify.aramailabs.com" target="_blank" class="announce-bar" id="announceBar">
+    <div class="announce-bar-inner">
+        <span class="announce-bar-live"><span class="announce-bar-dot"></span> Live</span>
+        <span class="announce-bar-text"><strong>Rankify</strong> is here &mdash; fair hiring, powered by AI</span>
+        <span class="announce-bar-cta">Try it free &rarr;</span>
+    </div>
+    <button class="announce-bar-close" id="announceClose" aria-label="Dismiss announcement">&times;</button>
+</a>
 
 <!-- ===== NAV ===== -->
 <nav class="nav" id="nav">
@@ -910,7 +1073,7 @@
             <h2 class="section-title">Build the Future of Fair AI With Us</h2>
             <p>Whether you are an enterprise looking for fair hiring technology, an investor who believes in ethical AI, or a GCP partner exploring what fairness-first AI looks like &mdash; we would love to hear from you.</p>
             <div class="cta-btns">
-                <a href="rankify.html#contact" class="btn btn-primary">Request Rankify Access &rarr;</a>
+                <a href="https://rankify.aramailabs.com" target="_blank" class="btn btn-primary">Try Rankify &rarr;</a>
                 <a href="mailto:contact@aramailabs.com" class="btn btn-ghost">Email Us</a>
             </div>
         </div>
@@ -951,7 +1114,7 @@
                     <li><a href="rankify.html">Rankify</a></li>
                     <li><a href="rankify.html#how-it-works">How It Works</a></li>
                     <li><a href="rankify.html#demo">Product Demo</a></li>
-                    <li><a href="rankify.html#contact">Early Access</a></li>
+                    <li><a href="https://rankify.aramailabs.com" target="_blank">Try Rankify</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -974,6 +1137,42 @@
 </footer>
 
 <script>
+    // Announcement bar
+    (function() {
+        const bar = document.getElementById('announceBar');
+        const btn = document.getElementById('announceClose');
+        if (localStorage.getItem('announce-dismissed') === '1') {
+            bar.classList.add('dismissed');
+            document.body.classList.remove('has-announce');
+        } else {
+            // Create floating sparkle particles
+            function createSparkle() {
+                const sparkle = document.createElement('div');
+                sparkle.classList.add('announce-sparkle');
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = (20 + Math.random() * 20) + 'px';
+                sparkle.style.animationDuration = (1.5 + Math.random() * 2) + 's';
+                sparkle.style.animationDelay = Math.random() * 0.5 + 's';
+                sparkle.style.width = (2 + Math.random() * 2) + 'px';
+                sparkle.style.height = sparkle.style.width;
+                bar.appendChild(sparkle);
+                sparkle.addEventListener('animationiteration', () => {
+                    sparkle.style.left = Math.random() * 100 + '%';
+                });
+            }
+            for (let i = 0; i < 12; i++) {
+                setTimeout(() => createSparkle(), i * 200);
+            }
+        }
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            bar.classList.add('dismissed');
+            document.body.classList.remove('has-announce');
+            localStorage.setItem('announce-dismissed', '1');
+        });
+    })();
+
     // Nav toggle
     const navToggle = document.getElementById('navToggle');
     const navLinks  = document.getElementById('navLinks');
