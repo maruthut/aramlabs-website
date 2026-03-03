@@ -175,6 +175,7 @@
         .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
         .nav-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
         .nav-links a:hover { color: var(--white); }
+        .nav-links a.active { color: var(--orange-500); font-weight: 600; }
         .nav-links .nav-cta { background: var(--orange-500); color: var(--white) !important; padding: 0.45rem 1.1rem; border-radius: var(--radius-md); font-weight: 600 !important; }
         .nav-links .nav-cta:hover { background: var(--orange-600) !important; }
 
@@ -1189,6 +1190,24 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-up, .problem-card, .step, .gcp-card, .security-card').forEach(el => observer.observe(el));
+
+    // Active nav link highlight on scroll
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navAnchors = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+    function updateActiveNav() {
+        let current = '';
+        sections.forEach(sec => {
+            const top = sec.offsetTop - 120;
+            if (window.scrollY >= top) current = sec.getAttribute('id');
+        });
+        navAnchors.forEach(a => {
+            a.classList.remove('active');
+            const href = a.getAttribute('href');
+            if (href && href.startsWith('#') && href === '#' + current) a.classList.add('active');
+        });
+    }
+    window.addEventListener('scroll', updateActiveNav);
+    updateActiveNav();
 
     // Counter animation for problem stats
     function animateCounter(el) {
