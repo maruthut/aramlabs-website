@@ -1179,6 +1179,23 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-up, .value-card, .gcp-card, .belief-pillar, .whynow-stat-card').forEach(el => observer.observe(el));
+
+    // Active nav link highlight on scroll
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navAnchors = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+    function updateActiveNav() {
+        let current = '';
+        sections.forEach(sec => {
+            const top = sec.offsetTop - 120;
+            if (window.scrollY >= top) current = sec.getAttribute('id');
+        });
+        navAnchors.forEach(a => {
+            a.classList.remove('active');
+            if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+        });
+    }
+    window.addEventListener('scroll', updateActiveNav);
+    updateActiveNav();
 </script>
 </body>
 </html>
